@@ -1,10 +1,13 @@
 import React from "react";
+import RightMotion from "../components/motion/RightMotion";
 
 const Login = (props: any) => {
     return (
-        <div>
-            <h1>login</h1>
-        </div>
+        <RightMotion>
+            <div>
+                <h1>Login</h1>
+            </div>
+        </RightMotion>
     );
 };
 

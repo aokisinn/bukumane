@@ -1,10 +1,13 @@
 import React from "react";
+import RightMotion from "../components/motion/RightMotion";
 
 const Home = (props: any) => {
     return (
-        <div>
-            <h1>home</h1>
-        </div>
+        <RightMotion>
+            <div>
+                <h1>home</h1>
+            </div>
+        </RightMotion>
     );
 };
 

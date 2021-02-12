@@ -1,10 +1,13 @@
 import React from "react";
+import RightMotion from "../components/motion/RightMotion";
 
 const Signup = (props: any) => {
     return (
-        <div>
-            <h1>signup</h1>
-        </div>
+        <RightMotion>
+            <div>
+                <h1>Signup</h1>
+            </div>
+        </RightMotion>
     );
 };
 
