@@ -32686,9 +32686,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 var react_dom_1 = __importDefault(__webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js"));
-// import Button from "react-bootstrap/Button";
 var react_router_dom_1 = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-var react_router_dom_2 = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 var Home_1 = __importDefault(__webpack_require__(/*! ./pages/Home */ "./resources/ts/pages/Home.tsx"));
 var Login_1 = __importDefault(__webpack_require__(/*! ./pages/Login */ "./resources/ts/pages/Login.tsx"));
 var Signup_1 = __importDefault(__webpack_require__(/*! ./pages/Signup */ "./resources/ts/pages/Signup.tsx"));
@@ -32696,11 +32694,11 @@ var App = function () {
     return (react_1.default.createElement(react_router_dom_1.BrowserRouter, null,
         react_1.default.createElement("nav", null,
             react_1.default.createElement("ul", null,
-                react_1.default.createElement(react_router_dom_2.Link, { to: "/" },
+                react_1.default.createElement(react_router_dom_1.Link, { to: "/" },
                     react_1.default.createElement("li", null, "Top")),
-                react_1.default.createElement(react_router_dom_2.Link, { to: "/login" },
+                react_1.default.createElement(react_router_dom_1.Link, { to: "/login" },
                     react_1.default.createElement("li", null, "login")),
-                react_1.default.createElement(react_router_dom_2.Link, { to: "/signup" },
+                react_1.default.createElement(react_router_dom_1.Link, { to: "/signup" },
                     react_1.default.createElement("li", null, "signup")))),
         react_1.default.createElement(react_router_dom_1.Switch, null,
             react_1.default.createElement(react_router_dom_1.Route, { exact: true, path: "/", component: Home_1.default }),

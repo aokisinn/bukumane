@@ -1,9 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-// import Button from "react-bootstrap/Button";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Link } from "react-router-dom";
-
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
