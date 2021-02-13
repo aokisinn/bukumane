@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import RightMotion from "../components/motion/RightMotion";
 import apiClient from "../utils/apiClient";
+import { Button } from "react-bootstrap";
+import { useAuth } from "../context/auth/useAuth";
 
 const Login = (props: any) => {
+    const { signIn, user } = useAuth();
+
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [IsReadOnly, setIsReadOnly] = useState(false);
@@ -37,6 +41,7 @@ const Login = (props: any) => {
     return (
         <RightMotion>
             <div>
+                <h1>{user?.name}</h1>
                 <h1>Login</h1>
                 <div className="form-group row">
                     <label className="col-sm-2 col-form-label">Email</label>
@@ -62,12 +67,18 @@ const Login = (props: any) => {
                         />
                     </div>
                 </div>
-                <button onClick={login} className="btn btn-primary mb-2">
+                <Button
+                    variant="primary"
+                    onClick={() => {
+                        // TODO フロントバリデーションどうするか様検討
+                        signIn(email, password);
+                    }}
+                >
                     ログイン
-                </button>
-                <button onClick={userLogin} className="btn btn-primary mb-2">
+                </Button>
+                <Button variant="primary" onClick={userLogin}>
                     ユーザ情報取得
-                </button>
+                </Button>
             </div>
         </RightMotion>
     );
