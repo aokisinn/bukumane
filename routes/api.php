@@ -15,7 +15,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::post('/login', function (Request $request) {
-    \Log::alert($request);
     $credentials = $request->validate([
         'email' => 'required|email',
         'password' => 'required'
