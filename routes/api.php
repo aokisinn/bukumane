@@ -14,25 +14,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::post('/login', function (Request $request) {
-//     $credentials = $request->validate([
-//         'email' => 'required|email',
-//         'password' => 'required'
-//     ]);
-
-//     if (auth()->attempt($credentials)) {
-//         return ['result' => true];
-//     }
-
-//     return response(['message' => 'ユーザーが見つかりません。'], 422);
-// });
-
 Route::post('/login', 'Api\User\UserLogin')
     ->name('UserLogin');
-
 
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('/user', function (Request $request) {
         return $request->user();
     });
+
+    // TODO とりあえず全取得 後日 ページネーション　実装 apiの名前見直し
+    Route::get('/bookList', 'Api\Book\BookList')
+        ->name('BookList');
 });
