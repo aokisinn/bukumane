@@ -1,24 +1,34 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import RightMotion from "../components/motion/RightMotion";
 import { useAuth } from "../context/auth/useAuth";
-import { Container } from "react-bootstrap";
+import { Container, Col, Row } from "react-bootstrap";
+import { useBookList } from "../hooks/useBookList";
+import BookCard from "../components/BookCard";
 
 const Home = (props: any) => {
     const { authUser } = useAuth();
+    const { getBookList, bookList } = useBookList();
 
     useEffect(() => {
-        authUser === null && props.history.push("/login");
+        if (authUser === null) {
+            return props.history.push("/login");
+        }
+        // TODO 5秒ごとに取得する様に変更
+        getBookList();
     }, [authUser]);
 
     return (
         <Container>
             <RightMotion>
-                <div>
-                    <h1>home</h1>
-                    <h2>ID: {authUser?.id}</h2>
-                    <h2>名前 : {authUser?.name}</h2>
-                    <h2>アドレス : {authUser?.address}</h2>
-                </div>
+                <Row>
+                    {bookList?.map(function(book) {
+                        return (
+                            <Col sm={3} style={{ margin: "10px" }}>
+                                <BookCard book={book} />
+                            </Col>
+                        );
+                    })}
+                </Row>
             </RightMotion>
         </Container>
     );
