@@ -16,7 +16,7 @@ const Login = (props: any) => {
         <RightMotion>
             <Container>
                 <h1>{authUser?.name}</h1>
-                <h1>Login</h1>
+                <h1>ログイン</h1>
                 <div className="form-group row">
                     <label className="col-sm-2 col-form-label">Email</label>
                     <div className="col-sm-6">

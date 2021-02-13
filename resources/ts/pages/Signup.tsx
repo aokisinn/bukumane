@@ -14,7 +14,7 @@ const Signup = (props: any) => {
         <RightMotion>
             <Container>
                 <div>
-                    <h1>Signup</h1>
+                    <h1>アカウント作成</h1>
                     <Button
                         variant="primary"
                         onClick={() => {
