@@ -35,11 +35,11 @@ export const useProvideAuth = (): AuthType => {
                         })
                         .then(res => {
                             setLoading(false);
-                            // TODO ユーザー設定
                             setUser({
-                                name: "名無しの権兵衛"
+                                id: res.data.user.id,
+                                name: res.data.user.name,
+                                address: res.data.user.address
                             });
-                            console.log("ログイン成功");
                         })
                         .catch(err => {
                             console.log(err.response);
