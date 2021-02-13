@@ -14,6 +14,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::post('/login', function (Request $request) {
+    \Log::alert($request);
+    $credentials = $request->validate([
+        'email' => 'required|email',
+        'password' => 'required'
+    ]);
+
+    if (auth()->attempt($credentials)) {
+        return ['result' => true];
+    }
+
+    return response(['message' => 'ユーザーが見つかりません。'], 422);
+});
+
+Route::middleware('auth:sanctum')->group(function () {
+    Route::get('/user', function (Request $request) {
+        return $request->user();
+    });
 });
