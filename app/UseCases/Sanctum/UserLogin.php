@@ -2,7 +2,7 @@
 
 namespace App\UseCases\Sanctum;
 
-use App\Model\User;
+use App\Models\User;
 use App\Exceptions\AuthenticationException;
 
 class UserLogin
