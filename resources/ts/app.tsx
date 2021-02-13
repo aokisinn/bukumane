@@ -4,10 +4,13 @@ import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const App: React.FC = () => {
     return (
         <Router>
+            <Header />
             <nav>
                 <ul>
                     <Link to="/">
@@ -26,6 +29,7 @@ const App: React.FC = () => {
                 <Route exact path="/login" component={Login} />
                 <Route exact path="/signup" component={Signup} />
             </Switch>
+            <Footer />
         </Router>
     );
 };
