@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import RightMotion from "../components/motion/RightMotion";
-import { Button } from "react-bootstrap";
+import { Button, Container } from "react-bootstrap";
 import { useAuth } from "../context/auth/useAuth";
 
 const Login = (props: any) => {
@@ -14,7 +14,7 @@ const Login = (props: any) => {
 
     return (
         <RightMotion>
-            <div>
+            <Container>
                 <h1>{authUser?.name}</h1>
                 <h1>Login</h1>
                 <div className="form-group row">
@@ -58,7 +58,7 @@ const Login = (props: any) => {
                 >
                     アカウント作成
                 </Button>
-            </div>
+            </Container>
         </RightMotion>
     );
 };
