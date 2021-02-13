@@ -50,6 +50,14 @@ const Login = (props: any) => {
                 >
                     ログイン
                 </Button>
+                <Button
+                    variant="primary"
+                    onClick={() => {
+                        props.history.push("/signup");
+                    }}
+                >
+                    アカウント作成
+                </Button>
             </div>
         </RightMotion>
     );
