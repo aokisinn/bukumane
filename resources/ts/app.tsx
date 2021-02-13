@@ -13,19 +13,6 @@ const App: React.FC = () => {
         <Router>
             <AuthProvider>
                 <Header />
-                <nav>
-                    <ul>
-                        <Link to="/">
-                            <li>home</li>
-                        </Link>
-                        <Link to="/login">
-                            <li>Login</li>
-                        </Link>
-                        <Link to="/signup">
-                            <li>signup</li>
-                        </Link>
-                    </ul>
-                </nav>
                 <Switch>
                     <Route exact path="/" component={Home} />
                     <Route exact path="/login" component={Login} />

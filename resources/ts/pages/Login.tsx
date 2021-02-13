@@ -1,18 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import RightMotion from "../components/motion/RightMotion";
 import { Button } from "react-bootstrap";
 import { useAuth } from "../context/auth/useAuth";
 
 const Login = (props: any) => {
-    const { signIn, user } = useAuth();
-
+    const { signIn, authUser } = useAuth();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+
+    useEffect(() => {
+        authUser && props.history.push("/");
+    }, [authUser]);
 
     return (
         <RightMotion>
             <div>
-                <h1>{user?.name}</h1>
+                <h1>{authUser?.name}</h1>
                 <h1>Login</h1>
                 <div className="form-group row">
                     <label className="col-sm-2 col-form-label">Email</label>

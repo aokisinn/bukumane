@@ -4,7 +4,7 @@ import apiClient from "../../utils/apiClient";
 import { AuthUserType } from "../../types/AuthUserType";
 
 export type AuthType = {
-    user: AuthUserType | null;
+    authUser: AuthUserType | null;
     signIn: (
         email: string | null | undefined,
         password: string | null | undefined
@@ -14,7 +14,7 @@ export type AuthType = {
 };
 
 export const useProvideAuth = (): AuthType => {
-    const [user, setUser] = useState<AuthUserType | null>(null);
+    const [authUser, setAuthUser] = useState<AuthUserType | null>(null);
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<Error | undefined>();
 
@@ -35,7 +35,7 @@ export const useProvideAuth = (): AuthType => {
                         })
                         .then(res => {
                             setLoading(false);
-                            setUser({
+                            setAuthUser({
                                 id: res.data.user.id,
                                 name: res.data.user.name,
                                 address: res.data.user.address
@@ -56,5 +56,5 @@ export const useProvideAuth = (): AuthType => {
         []
     );
 
-    return { user, signIn, loading, error };
+    return { authUser, signIn, loading, error };
 };
