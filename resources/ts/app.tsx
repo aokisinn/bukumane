@@ -16,10 +16,10 @@ const App: React.FC = () => {
                 <nav>
                     <ul>
                         <Link to="/">
-                            <li>login</li>
-                        </Link>
-                        <Link to="/home">
                             <li>home</li>
+                        </Link>
+                        <Link to="/login">
+                            <li>Login</li>
                         </Link>
                         <Link to="/signup">
                             <li>signup</li>
@@ -27,8 +27,8 @@ const App: React.FC = () => {
                     </ul>
                 </nav>
                 <Switch>
-                    <Route exact path="/" component={Login} />
-                    <Route exact path="/home" component={Home} />
+                    <Route exact path="/" component={Home} />
+                    <Route exact path="/login" component={Login} />
                     <Route exact path="/signup" component={Signup} />
                 </Switch>
                 <Footer />
