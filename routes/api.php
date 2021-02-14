@@ -25,4 +25,14 @@ Route::middleware('auth:sanctum')->group(function () {
     // TODO とりあえず全取得 後日 ページネーション　実装 apiの名前見直し
     Route::get('/bookList', 'Api\Book\BookList')
         ->name('BookList');
+
+    // TODO ルート名 書籍取得処理
+    Route::get('/bookRetrieve', function (Request $request) {
+        return ["未実装"];
+    });
+
+    // TODO ルート名 書籍登録処理
+    Route::post('/bookRegister', function (Request $request) {
+        return ["未実装"];
+    });
 });
