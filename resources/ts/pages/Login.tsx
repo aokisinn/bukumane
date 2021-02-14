@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import RightMotion from "../components/motion/RightMotion";
-import { Button, Container } from "react-bootstrap";
+import { Button, Container, Jumbotron } from "react-bootstrap";
 import { useAuth } from "../context/auth/useAuth";
 
 const Login = (props: any) => {
@@ -13,53 +13,65 @@ const Login = (props: any) => {
     }, [authUser]);
 
     return (
-        <RightMotion>
-            <Container>
-                <h1>{authUser?.name}</h1>
-                <h1>ログイン</h1>
-                <div className="form-group row">
-                    <label className="col-sm-2 col-form-label">Email</label>
-                    <div className="col-sm-6">
-                        <input
-                            type="text"
-                            className="form-control"
-                            placeholder="test@mediaxis.jp"
-                            value={email}
-                            onChange={e => setEmail(e.target.value)}
-                        />
-                    </div>
-                </div>
-                <div className="form-group row">
-                    <label className="col-sm-2 col-form-label">Password</label>
-                    <div className="col-sm-6">
-                        <input
-                            type="password"
-                            className="form-control"
-                            placeholder="パスワード"
-                            value={password}
-                            onChange={e => setPassword(e.target.value)}
-                        />
-                    </div>
-                </div>
-                <Button
-                    variant="primary"
-                    onClick={() => {
-                        // TODO フロントバリデーションどうするか様検討
-                        signIn(email, password);
-                    }}
-                >
-                    ログイン
-                </Button>
-                <Button
-                    variant="primary"
-                    onClick={() => {
-                        props.history.push("/signup");
-                    }}
-                >
-                    アカウント作成
-                </Button>
-            </Container>
-        </RightMotion>
+        <>
+            <RightMotion>
+                <>
+                    <Jumbotron>
+                        <Container>
+                            <h1 className="display-1">ログイン</h1>
+                        </Container>
+                    </Jumbotron>
+                    <Container>
+                        <h1>{authUser?.name}</h1>
+                        <div className="form-group row">
+                            <label className="col-sm-2 col-form-label">
+                                Email
+                            </label>
+                            <div className="col-sm-6">
+                                <input
+                                    type="text"
+                                    className="form-control"
+                                    placeholder="test@mediaxis.jp"
+                                    value={email}
+                                    onChange={e => setEmail(e.target.value)}
+                                />
+                            </div>
+                        </div>
+                        <div className="form-group row">
+                            <label className="col-sm-2 col-form-label">
+                                Password
+                            </label>
+                            <div className="col-sm-6">
+                                <input
+                                    type="password"
+                                    className="form-control"
+                                    placeholder="パスワード"
+                                    value={password}
+                                    onChange={e => setPassword(e.target.value)}
+                                />
+                            </div>
+                        </div>
+                        <Button
+                            variant="primary"
+                            onClick={() => {
+                                // TODO フロントバリデーションどうするか様検討
+                                signIn(email, password);
+                            }}
+                        >
+                            ログイン
+                        </Button>
+                        <Button
+                            variant="primary"
+                            onClick={() => {
+                                props.history.push("/signup");
+                            }}
+                        >
+                            アカウント作成
+                        </Button>
+                    </Container>
+                </>
+            </RightMotion>
+        </>
     );
 };
 

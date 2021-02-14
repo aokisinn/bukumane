@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import RightMotion from "../components/motion/RightMotion";
 import { useAuth } from "../context/auth/useAuth";
-import { Container, Col, Row } from "react-bootstrap";
+import { Container, Col, Row, Jumbotron } from "react-bootstrap";
 import { useBookList } from "../hooks/useBookList";
 import BookCard from "../components/BookCard";
 
@@ -18,19 +18,26 @@ const Home = (props: any) => {
     }, [authUser]);
 
     return (
-        <Container>
-            <RightMotion>
-                <Row>
-                    {bookList?.map(function(book) {
-                        return (
-                            <Col sm={3} style={{ margin: "10px" }}>
-                                <BookCard book={book} />
-                            </Col>
-                        );
-                    })}
-                </Row>
-            </RightMotion>
-        </Container>
+        <RightMotion>
+            <>
+                <Jumbotron>
+                    <Container>
+                        <h1 className="display-1">書籍一覧</h1>
+                    </Container>
+                </Jumbotron>
+                <Container>
+                    <Row>
+                        {bookList?.map(function(book) {
+                            return (
+                                <Col sm={3} style={{ margin: "10px" }}>
+                                    <BookCard book={book} />
+                                </Col>
+                            );
+                        })}
+                    </Row>
+                </Container>
+            </>
+        </RightMotion>
     );
 };
 
