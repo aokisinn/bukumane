@@ -29,6 +29,7 @@ const Home = (props: any) => {
                     <Row>
                         {bookList?.map(function(book) {
                             return (
+                                // TODO レイアウト調整
                                 <Col sm={3} style={{ margin: "10px" }}>
                                     <BookCard book={book} />
                                 </Col>
