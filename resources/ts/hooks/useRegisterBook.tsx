@@ -3,7 +3,7 @@ import { useCallback, useState } from "react";
 import apiClient from "../utils/apiClient";
 import { BookType } from "../types/BookType";
 
-export const useBookRegister = () => {
+export const useRegisterBook = () => {
     const [book, setBook] = useState<BookType | undefined>(undefined);
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<Error | undefined>();

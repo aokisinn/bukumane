@@ -27,12 +27,12 @@ Route::middleware('auth:sanctum')->group(function () {
         ->name('BookList');
 
     // TODO ルート名 書籍取得処理
-    Route::get('/bookRetrieve', function (Request $request) {
+    Route::get('/searchRegisterBook', function (Request $request) {
         return ["未実装"];
     });
 
     // TODO ルート名 書籍登録処理
-    Route::post('/bookRegister', function (Request $request) {
+    Route::post('/registerBook', function (Request $request) {
         return ["未実装"];
     });
 });
