@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import RegisterBook from "./pages/book/RegisterBook";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import AuthProvider from "./context/auth/AuthProvider";
@@ -18,6 +19,11 @@ const App: React.FC = () => {
                         <Route exact path="/" component={Home} />
                         <Route exact path="/login" component={Login} />
                         <Route exact path="/signup" component={Signup} />
+                        <Route
+                            exact
+                            path="/book/register"
+                            component={RegisterBook}
+                        />
                     </Switch>
                 </main>
                 <Footer />

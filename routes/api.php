@@ -17,9 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::post('/login', 'Api\User\UserLogin')
     ->name('UserLogin');
 
-Route::get('/searchRegisterBook', 'Api\Book\SearchRegisterBook')
-    ->name('SearchRegisterBook');
-
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('/user', function (Request $request) {
         return $request->user();
@@ -29,10 +26,8 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/bookList', 'Api\Book\BookList')
         ->name('BookList');
 
-    // TODO ルート名 書籍取得処理
-    // Route::get('/searchRegisterBook', function (Request $request) {
-    //     return ["未実装"];
-    // });
+    Route::post('/searchRegisterBook', 'Api\Book\SearchRegisterBook')
+        ->name('SearchRegisterBook');
 
     // TODO ルート名 書籍登録処理
     Route::post('/registerBook', function (Request $request) {

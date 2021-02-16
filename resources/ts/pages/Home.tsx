@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import RightMotion from "../components/motion/RightMotion";
 import { useAuth } from "../context/auth/useAuth";
-import { Container, Col, Row, Jumbotron } from "react-bootstrap";
+import { Container, Col, Row, Jumbotron, Button } from "react-bootstrap";
 import { useBookList } from "../hooks/useBookList";
 import BookCard from "../components/BookCard";
 
@@ -26,6 +26,14 @@ const Home = (props: any) => {
                     </Container>
                 </Jumbotron>
                 <Container>
+                    <Button
+                        variant="primary"
+                        onClick={() => {
+                            props.history.push("/book/register");
+                        }}
+                    >
+                        登録
+                    </Button>
                     <Row>
                         {bookList?.map(function(book) {
                             return (
