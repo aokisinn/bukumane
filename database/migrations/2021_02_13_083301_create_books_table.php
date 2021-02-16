@@ -15,14 +15,18 @@ class CreateBooksTable extends Migration
     {
         Schema::create('books', function (Blueprint $table) {
             $table->id();
-            $table->text('name');
-            $table->text('description')->nullable();
-            $table->text('publisher')->nullable();
-            $table->text('photo_url');
-            $table->text('authors')->nullable();
-            $table->text('isbn10')->nullable();
-            $table->text('isbn13')->nullable();
-            $table->datetime('release_date')->nullable();
+            $table->text('title');
+            $table->text('author');
+            $table->text('caption');
+            $table->text('publisher');
+            $table->text('isbn');
+            $table->text('large_image_url');
+            $table->text('medium_image_url');
+            $table->text('small_image_url');
+            $table->text('sales_date');
+            $table->text('price');
+            $table->text('size');
+            $table->text('item_url');
             $table->integer('created_user_id');
             $table->foreign("created_user_id")->references("id")->on("users");
             $table->timestamps();

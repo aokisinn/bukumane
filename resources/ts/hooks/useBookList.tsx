@@ -17,15 +17,18 @@ export const useBookList = () => {
                 const books = res.data.books.map(function(book) {
                     return {
                         id: book?.id,
-                        name: book?.name,
-                        description: book?.description,
+                        title: book?.title,
+                        author: book?.author,
+                        caption: book?.caption,
                         publisher: book?.publisher,
-                        photo_url: book?.photo_url,
-                        authors: book?.authors,
-                        isbn10: book?.isbn10,
-                        isbn13: book?.isbn13,
-                        release_date: book?.release_date,
-                        created_user_id: book?.created_user_id,
+                        isbn: book?.isbn,
+                        large_image_url: book?.large_image_url,
+                        medium_image_url: book?.medium_image_url,
+                        small_image_url: book?.small_image_url,
+                        item_url: book?.item_url,
+                        sales_date: book?.sales_date,
+                        price: book?.price,
+                        size: book?.size,
                         created_at: book?.created_at,
                         updated_at: book?.updated_at
                     };

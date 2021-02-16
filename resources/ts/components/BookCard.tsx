@@ -7,10 +7,10 @@ const BookCard: React.FC<{
 }> = ({ book }) => {
     return (
         <Card style={{ width: "18rem" }} key={book.id}>
-            <Card.Img variant="top" src={book.photo_url} />
+            <Card.Img variant="top" src={book.large_image_url} />
             <Card.Body>
-                <Card.Title>{book.name}</Card.Title>
-                <Card.Text>{book.description?.substr(0, 20)}</Card.Text>
+                <Card.Title>{book.title}</Card.Title>
+                <Card.Text>{book.caption?.substr(0, 20)}</Card.Text>
                 <Button variant="primary" block={true}>
                     詳細
                 </Button>

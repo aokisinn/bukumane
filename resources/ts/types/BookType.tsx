@@ -1,14 +1,17 @@
 export type BookType = {
     id: number | undefined;
-    name: string | undefined;
-    description: string | undefined;
+    title: string | undefined;
+    author: string | undefined;
+    caption: string | undefined;
     publisher: string | undefined;
-    photo_url: string | undefined;
-    authors: string | undefined;
-    isbn10: string | undefined;
-    isbn13: string | undefined;
-    release_date: string | undefined;
-    created_user_id: string | undefined;
+    isbn: string | undefined;
+    large_image_url: string | undefined;
+    medium_image_url: string | undefined;
+    small_image_url: string | undefined;
+    item_url: string | undefined;
+    sales_date: string | undefined;
+    price: string | number | undefined;
+    size: string | undefined;
     created_at: string | undefined;
     updated_at: string | undefined;
 };
