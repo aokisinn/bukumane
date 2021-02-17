@@ -33,7 +33,7 @@ class SearchRegisterBook
             $book = new Book();
             $book->title = $posts['Items'][0]["Item"]['title'] ?? "";
             $book->caption = $posts['Items'][0]["Item"]['itemCaption'] ?? "";
-            $book->authors = $posts['Items'][0]["Item"]['author'] ?? "";
+            $book->author = $posts['Items'][0]["Item"]['author'] ?? "";
             $book->publisher = $posts['Items'][0]["Item"]['publisherName'] ?? "";
             $book->isbn = $posts['Items'][0]["Item"]['isbn'] ?? "";
             $book->large_image_url = $posts['Items'][0]["Item"]['largeImageUrl'] ?? "";
