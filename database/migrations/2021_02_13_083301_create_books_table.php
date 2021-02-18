@@ -27,7 +27,7 @@ class CreateBooksTable extends Migration
             $table->text('price');
             $table->text('size');
             $table->text('item_url');
-            $table->integer('created_user_id');
+            $table->unsignedBigInteger('created_user_id');
             $table->foreign("created_user_id")->references("id")->on("users");
             $table->timestamps();
         });

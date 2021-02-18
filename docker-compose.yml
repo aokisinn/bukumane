@@ -1,0 +1,70 @@
+version: '3.8'
+services:
+  app:
+    container_name: app.bukumane
+    build: ./docker/app
+    volumes:
+      - "./:/var/www/html"
+    depends_on:
+      - db
+    networks:
+      - web_app
+      - backend
+
+  web:
+    container_name: web.bukumane
+    build: docker/web
+    ports:
+      - "8000:80"
+    volumes:
+      - "./public:/var/www/html/public"
+      - "./storage/app/public:/var/www/html/public/storage"
+    depends_on:
+      - app
+    networks:
+      - web_app
+
+  db:
+    build:
+      context: ./docker/db
+    container_name: db.bukumane
+    tty: true
+    volumes:
+      - ./docker/db/data:/var/lib/mysql:cached
+    command: [
+        '--character-set-server=utf8mb4',
+        '--skip-character-set-client-handshake',
+        '--collation-server=utf8mb4_general_ci',
+        '--explicit-defaults-for-timestamp=1',
+      # 一般クエリーログは膨大になる可能性があるので普段はコメントアウト
+      # 一般クエリーログを確認したい場合はコメントアウトを削除してコンテナを再起動する
+      #      '--general-log=1',
+      #      '--general-log-file=/var/log/mysql/general.log',
+        '--slow-query-log=1',
+        '--long-query-time=1',
+        '--slow-query-log-file=/var/log/mysql/slow.log',
+        '--log-queries-not-using-indexes=0',
+        '--log-timestamps=SYSTEM'
+    ]
+    restart: always
+    ports:
+      - 33200:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root!password?
+      MYSQL_DATABASE: bukumane
+      MYSQL_USER: bukumane
+      MYSQL_PASSWORD: bukumane?2021
+    networks:
+      - backend
+
+  composer:
+    container_name: composer.bukumane
+    image: composer:1.9.3
+    volumes:
+      - "./:/app"
+    command: [ "composer", "install" ]
+
+networks:
+  web_app:
+  backend:
+    driver: bridge
