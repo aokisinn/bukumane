@@ -29,8 +29,6 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('/searchRegisterBook', 'Api\Book\SearchRegisterBook')
         ->name('SearchRegisterBook');
 
-    // TODO ルート名 書籍登録処理
-    Route::post('/registerBook', function (Request $request) {
-        return ["未実装"];
-    });
+    Route::post('/registerBook', 'Api\Book\RegisterBook')
+        ->name('RegisterBook');
 });

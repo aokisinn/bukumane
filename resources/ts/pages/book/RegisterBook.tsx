@@ -23,37 +23,52 @@ const RegisterBook = (props: any) => {
     const [size, setSize] = useState("");
 
     const {
+        registerBook,
         searchRegisterBook,
         searchBook,
         searchLoading,
+        registerLoading,
+        isRegister,
         error
     } = useRegisterBook();
 
     useEffect(() => {
-        if (authUser === null) {
-            return props.history.push("/login");
-        }
-        // searchRegisterBook("9784798063737");
+        if (!authUser) return props.history.push("/login");
     }, [authUser]);
 
     useEffect(() => {
-        console.log("-----");
-        console.log(searchBook);
-        if (searchBook) {
-            setIsbn(searchBook?.isbn ?? "");
-            setTitle(searchBook?.title ?? "");
-            setAuthor(searchBook?.author ?? "");
-            setCaption(searchBook?.caption ?? "");
-            setPublisher(searchBook?.publisher ?? "");
-            setLargeImageUrl(searchBook?.large_image_url ?? "");
-            setMediumImageUrl(searchBook?.medium_image_url ?? "");
-            setSmallmageUrl(searchBook?.small_image_url ?? "");
-            setItemUrl(searchBook?.item_url ?? "");
-            setSalesDate(searchBook?.sales_date ?? "");
-            setPrice(searchBook?.price ?? 0);
-            setSize(searchBook?.size ?? "");
-        }
+        if (!searchBook) return;
+
+        setIsbn(searchBook?.isbn ?? "");
+        setTitle(searchBook?.title ?? "");
+        setAuthor(searchBook?.author ?? "");
+        setCaption(searchBook?.caption ?? "");
+        setPublisher(searchBook?.publisher ?? "");
+        setLargeImageUrl(searchBook?.large_image_url ?? "");
+        setMediumImageUrl(searchBook?.medium_image_url ?? "");
+        setSmallmageUrl(searchBook?.small_image_url ?? "");
+        setItemUrl(searchBook?.item_url ?? "");
+        setSalesDate(searchBook?.sales_date ?? "");
+        setPrice(searchBook?.price ?? 0);
+        setSize(searchBook?.size ?? "");
     }, [searchBook]);
+
+    useEffect(() => {
+        if (!isRegister) return;
+        setSearchIsbn("");
+        setIsbn("");
+        setTitle("");
+        setAuthor("");
+        setCaption("");
+        setPublisher("");
+        setLargeImageUrl("");
+        setMediumImageUrl("");
+        setSmallmageUrl("");
+        setItemUrl("");
+        setSalesDate("");
+        setPrice("");
+        setSize("");
+    }, [isRegister]);
 
     return (
         <>
@@ -65,6 +80,13 @@ const RegisterBook = (props: any) => {
                 </RightMotion>
             </Jumbotron>
             <Container>
+                {isRegister ? (
+                    <>
+                        <Alert variant={"success"}>登録に成功しました</Alert>
+                    </>
+                ) : (
+                    <></>
+                )}
                 {error ? (
                     <>
                         <Alert variant={"danger"}>{error.message}</Alert>
@@ -93,7 +115,7 @@ const RegisterBook = (props: any) => {
                         />
                     </div>
                     <div className="col-sm-2">
-                        {searchLoading ? (
+                        {searchLoading || registerLoading ? (
                             <Button variant="primary" disabled>
                                 <Spinner
                                     as="span"
@@ -233,8 +255,8 @@ const RegisterBook = (props: any) => {
                         />
                     </div>
                 </div>
-                {searchLoading ? (
-                    <Button variant="primary" disabled>
+                {searchLoading || registerLoading ? (
+                    <Button variant="primary" disabled block={true}>
                         <Spinner
                             as="span"
                             animation="grow"
@@ -247,8 +269,21 @@ const RegisterBook = (props: any) => {
                 ) : (
                     <Button
                         variant="primary"
-                        onClick={() => {
-                            // RegisterBook();
+                        onClick={async () => {
+                            await registerBook(
+                                title,
+                                author,
+                                caption,
+                                publisher,
+                                isbn,
+                                largeImageUrl,
+                                mediumImageUrl,
+                                smallImageUrl,
+                                itemUrl,
+                                salesDate,
+                                price,
+                                size
+                            );
                         }}
                         block={true}
                     >

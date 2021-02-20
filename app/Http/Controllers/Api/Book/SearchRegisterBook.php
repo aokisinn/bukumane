@@ -21,7 +21,6 @@ class SearchRegisterBook extends Controller
                 $request->get("isbn")
             );
 
-
             return response()
                 ->json(['book' => new BookResources($book)]);
         } catch (NotFoundBookException $e) {

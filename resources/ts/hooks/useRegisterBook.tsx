@@ -8,6 +8,8 @@ export const useRegisterBook = () => {
         undefined
     );
     const [searchLoading, setSearchLoading] = useState<boolean>(false);
+    const [registerLoading, setRegisterLoading] = useState<boolean>(false);
+    const [isRegister, setIsRegister] = useState<boolean>(false);
     const [error, setError] = useState<Error | undefined>();
 
     // TODO 変数名
@@ -15,6 +17,7 @@ export const useRegisterBook = () => {
         void
     > => {
         setSearchLoading(true);
+        setIsRegister(false);
         setError(undefined);
         apiClient
             .post("/api/searchRegisterBook", {
@@ -54,32 +57,65 @@ export const useRegisterBook = () => {
             });
     }, []);
 
-    const registerBook = useCallback(async (): Promise<void> => {
-        // TODO 登録処理実装
-        // setLoading(true);
-        // apiClient
-        //     .post("/api/bookRegister")
-        //     .then(res => {
-        //         setLoading(false);
-        //         const books = res.data.books.map(function(book) {
-        //             return;
-        //         });
-        //         setBookList(books);
-        //     })
-        //     .catch(err => {
-        //         console.log(err.response);
-        //         setLoading(false);
-        //         // TODO 例外処理 分岐
-        //         setError(new Error("書籍情報の登録に失敗しました"));
-        //         // setError(new Error("既に登録に失敗しました"));
-        //     });
-    }, []);
+    const registerBook = useCallback(
+        async (
+            title: string,
+            author: string,
+            caption: string,
+            publisher: string,
+            isbn: string,
+            largeImageUrl: string,
+            mediumImageUrl: string,
+            smallImageUrl: string,
+            itemUrl: string,
+            salesDate: string,
+            price: string | number,
+            size: string
+        ): Promise<void> => {
+            setRegisterLoading(true);
+            setIsRegister(false);
+            setError(undefined);
+
+            apiClient
+                .post("/api/registerBook", {
+                    title,
+                    author,
+                    caption,
+                    publisher,
+                    isbn,
+                    largeImageUrl,
+                    mediumImageUrl,
+                    smallImageUrl,
+                    itemUrl,
+                    salesDate,
+                    price,
+                    size
+                })
+                .then(res => {
+                    setRegisterLoading(false);
+                    setIsRegister(true);
+                })
+                .catch(err => {
+                    console.log(err.response);
+                    setRegisterLoading(false);
+                    setError(
+                        new Error(
+                            err.response.data?.message ??
+                                "原因不明のエラーが発生しました"
+                        )
+                    );
+                });
+        },
+        []
+    );
 
     return {
         searchRegisterBook,
         registerBook,
         searchBook,
         searchLoading,
+        registerLoading,
+        isRegister,
         error
     };
 };

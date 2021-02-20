@@ -21,8 +21,8 @@ use App\Models\User;
  * @property string $item_url
  * @property int $created_user_id
  * @property User $user
- * @property string $created_at
- * @property string $updated_at
+ * @property Carbon $created_at
+ * @property Carbon $updated_at
  */
 class Book extends Model
 {
@@ -41,7 +41,8 @@ class Book extends Model
         'sales_date',
         'price',
         'size',
-        'item_url'
+        'item_url',
+        'created_user_id'
     ];
 
     /**
