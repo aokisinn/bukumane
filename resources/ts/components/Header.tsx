@@ -4,7 +4,7 @@ import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 const Header = () => {
     return (
         <Navbar expand="md" bg="dark" variant="dark" fixed="top">
-            <Navbar.Brand>ブクマネ</Navbar.Brand>
+            <Navbar.Brand>ブクマネ!</Navbar.Brand>
             {/* TODO アカウント 名表示 */}
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
