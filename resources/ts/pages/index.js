@@ -1,0 +1,5 @@
+export {default as DetailBook} from './book/DetailBook'
+export {default as Home} from './Home'
+export {default as Login} from './Login'
+export {default as RegisterBook} from './book/RegisterBook'
+export {default as SignUp} from './SignUp'
