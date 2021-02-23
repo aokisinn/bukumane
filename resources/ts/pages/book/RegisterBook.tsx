@@ -241,28 +241,28 @@ const RegisterBook = (props: any) => {
                             )}
                         </Button>
                     </Paper>
-                    <div
-                        style={{
-                            margin: 0,
-                            top: "auto",
-                            right: 20,
-                            bottom: 20,
-                            left: "auto",
-                            position: "fixed"
-                        }}
-                    >
-                        <Fab
-                            color="secondary"
-                            aria-label="add"
-                            onClick={() => {
-                                props.history.push("/");
-                            }}
-                        >
-                            <ArrowBack />
-                        </Fab>
-                    </div>
                 </Grid>
             </RightMotion>
+            <div
+                style={{
+                    margin: 0,
+                    top: "auto",
+                    right: 20,
+                    bottom: 20,
+                    left: "auto",
+                    position: "fixed"
+                }}
+            >
+                <Fab
+                    color="secondary"
+                    aria-label="add"
+                    onClick={() => {
+                        props.history.push("/");
+                    }}
+                >
+                    <ArrowBack />
+                </Fab>
+            </div>
         </React.Fragment>
     );
 };
