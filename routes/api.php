@@ -18,9 +18,8 @@ Route::post('/login', 'Api\User\UserLogin')
     ->name('UserLogin');
 
 Route::middleware('auth:sanctum')->group(function () {
-    Route::get('/user', function (Request $request) {
-        return $request->user();
-    });
+    Route::get('/me', 'Api\User\Me')
+        ->name('Me');
 
     // TODO とりあえず全取得 後日 ページネーション　実装 apiの名前見直し
     Route::get('/bookList', 'Api\Book\BookList')

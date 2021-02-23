@@ -11,7 +11,7 @@ import Alert from "@material-ui/lab/Alert";
 import CardMedia from "@material-ui/core/CardMedia";
 
 const RegisterBook = (props: any) => {
-    const { authUser } = useAuth();
+    const { authUser, setCurrentUser } = useAuth();
     const [searchIsbn, setSearchIsbn] = useState("");
     const [title, setTitle] = useState("");
     const [author, setAuthor] = useState("");
@@ -45,8 +45,12 @@ const RegisterBook = (props: any) => {
     };
 
     useEffect(() => {
-        if (!authUser) return props.history.push("/login");
-    }, [authUser]);
+        setCurrentUser().then(currentUser => {
+            if (!currentUser) {
+                return props.history.push("/login");
+            }
+        });
+    }, []);
 
     useEffect(() => {
         if (!searchBook) return;
@@ -203,40 +207,39 @@ const RegisterBook = (props: any) => {
                             value={size}
                             onChange={e => setSize(e.target.value)}
                         />
-                        <div
+
+                        <Button
+                            color="primary"
+                            variant="contained"
+                            fullWidth
+                            onClick={async () => {
+                                console.log(title);
+                                await registerBook(
+                                    title,
+                                    author,
+                                    caption,
+                                    publisher,
+                                    isbn,
+                                    largeImageUrl,
+                                    mediumImageUrl,
+                                    smallImageUrl,
+                                    itemUrl,
+                                    salesDate,
+                                    price,
+                                    size
+                                );
+                            }}
                             style={{
                                 top: 10
                             }}
+                            disabled={searchLoading || registerLoading}
                         >
-                            <Button
-                                color="primary"
-                                variant="contained"
-                                fullWidth
-                                onClick={async () => {
-                                    await registerBook(
-                                        title,
-                                        author,
-                                        caption,
-                                        publisher,
-                                        isbn,
-                                        largeImageUrl,
-                                        mediumImageUrl,
-                                        smallImageUrl,
-                                        itemUrl,
-                                        salesDate,
-                                        price,
-                                        size
-                                    );
-                                }}
-                                disabled={searchLoading || registerLoading}
-                            >
-                                {searchLoading || registerLoading ? (
-                                    <CircularProgress />
-                                ) : (
-                                    "登録"
-                                )}
-                            </Button>
-                        </div>
+                            {searchLoading || registerLoading ? (
+                                <CircularProgress />
+                            ) : (
+                                "登録"
+                            )}
+                        </Button>
                     </Paper>
                     <div
                         style={{

@@ -9,15 +9,17 @@ import Fab from "@material-ui/core/Fab";
 import AddIcon from "@material-ui/icons/Add";
 
 const Home = (props: any) => {
-    const { authUser } = useAuth();
+    const { authUser, setCurrentUser } = useAuth();
     const { getBookList, bookList } = useBookList();
 
     useEffect(() => {
-        if (authUser === null) {
-            return props.history.push("/login");
-        }
+        setCurrentUser().then(currentUser => {
+            if (!currentUser) {
+                return props.history.push("/login");
+            }
+        });
         getBookList();
-    }, [authUser]);
+    }, []);
 
     return (
         <React.Fragment>
