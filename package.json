@@ -34,6 +34,9 @@
         "typescript": "^4.1.5"
     },
     "dependencies": {
+        "@material-ui/core": "^4.11.3",
+        "@material-ui/icons": "^4.11.2",
+        "@material-ui/lab": "^4.0.0-alpha.57",
         "framer-motion": "^3.3.0",
         "react-bootstrap": "^1.4.3",
         "react-router-dom": "^5.2.0"

@@ -1,40 +1,50 @@
 import React from "react";
-import { Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import Typography from "@material-ui/core/Typography";
+import Button from "@material-ui/core/Button";
+import IconButton from "@material-ui/core/IconButton";
+import MenuIcon from "@material-ui/icons/Menu";
 
-const Header = () => {
+const useStyles = makeStyles((theme: Theme) =>
+    createStyles({
+        root: {
+            flexGrow: 1
+        },
+        menuButton: {
+            marginRight: theme.spacing(2)
+        },
+        title: {
+            flexGrow: 1
+        }
+    })
+);
+
+export default function Header() {
+    const classes = useStyles();
+
     return (
-        <Navbar expand="md" bg="dark" variant="dark" fixed="top">
-            <Navbar.Brand>ブクマネ!</Navbar.Brand>
-            {/* TODO アカウント 名表示 */}
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-                {/* <Nav className="mr-auto">
-                    <Nav.Link href="#home" active>
-                        Home
-                    </Nav.Link>
-                    <Nav.Link href="#features">Link</Nav.Link>
-                    <Nav.Link href="#pricing" disabled>
-                        Disabled
-                    </Nav.Link>
-                    <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                        <NavDropdown.Item href="#action">
-                            Action
-                        </NavDropdown.Item>
-                        <NavDropdown.Item href="#another">
-                            Another action
-                        </NavDropdown.Item>
-                        <NavDropdown.Item href="#something">
-                            Something
-                        </NavDropdown.Item>
-                        <NavDropdown.Divider />
-                        <NavDropdown.Item href="#separated">
-                            Separated link
-                        </NavDropdown.Item>
-                    </NavDropdown>
-                </Nav> */}
-            </Navbar.Collapse>
-        </Navbar>
+        <div className={classes.root}>
+            <AppBar position="static">
+                <Toolbar>
+                    <IconButton
+                        edge="start"
+                        className={classes.menuButton}
+                        color="inherit"
+                        aria-label="menu"
+                        onClick={() => {
+                            // TODO 機能一覧表示
+                            alert("未実装");
+                        }}
+                    >
+                        <MenuIcon />
+                    </IconButton>
+                    <Typography variant="h6" className={classes.title}>
+                        ブクマネ!
+                    </Typography>
+                </Toolbar>
+            </AppBar>
+        </div>
     );
-};
-
-export default Header;
+}

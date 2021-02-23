@@ -1,8 +1,14 @@
 import React, { useState, useEffect } from "react";
 import RightMotion from "../../components/motion/RightMotion";
 import { useAuth } from "../../context/auth/useAuth";
-import { Container, Button, Jumbotron, Spinner, Alert } from "react-bootstrap";
 import { useRegisterBook } from "../../hooks/useRegisterBook";
+import { Grid, TextField, Button, Paper } from "@material-ui/core";
+import Fab from "@material-ui/core/Fab";
+import ArrowBack from "@material-ui/icons/ArrowBack";
+import CircularProgress from "@material-ui/core/CircularProgress";
+import Snackbar from "@material-ui/core/Snackbar";
+import Alert from "@material-ui/lab/Alert";
+import CardMedia from "@material-ui/core/CardMedia";
 
 const RegisterBook = (props: any) => {
     const { authUser } = useAuth();
@@ -31,6 +37,12 @@ const RegisterBook = (props: any) => {
         isRegister,
         error
     } = useRegisterBook();
+
+    const paperStyle = {
+        padding: 20,
+        width: "80%",
+        margin: "20px auto"
+    };
 
     useEffect(() => {
         if (!authUser) return props.history.push("/login");
@@ -61,9 +73,9 @@ const RegisterBook = (props: any) => {
         setAuthor("");
         setCaption("");
         setPublisher("");
-        setLargeImageUrl("");
-        setMediumImageUrl("");
-        setSmallmageUrl("");
+        setLargeImageUrl("/images/no_image.png");
+        setMediumImageUrl("/images/no_image.png");
+        setSmallmageUrl("/images/no_image.png");
         setItemUrl("");
         setSalesDate("");
         setPrice("");
@@ -71,64 +83,37 @@ const RegisterBook = (props: any) => {
     }, [isRegister]);
 
     return (
-        <>
-            <Jumbotron>
-                <RightMotion>
-                    <Container>
-                        <h1 className="display-1">書籍新規登録</h1>
-                    </Container>
-                </RightMotion>
-            </Jumbotron>
-            <Container>
-                {isRegister ? (
-                    <>
-                        <Alert variant={"success"}>登録に成功しました</Alert>
-                    </>
-                ) : (
-                    <></>
-                )}
-                {error ? (
-                    <>
-                        <Alert variant={"danger"}>{error.message}</Alert>
-                    </>
-                ) : (
-                    <></>
-                )}
-                <Button
-                    variant="primary"
-                    onClick={() => {
-                        props.history.push("/");
-                    }}
-                >
-                    戻る
-                </Button>
-                <hr />
-                <div className="form-group row">
-                    <label className="col-sm-2 col-form-label">書籍検索</label>
-                    <div className="col-sm-8">
-                        <input
-                            type="text"
-                            className="form-control"
-                            placeholder="書籍のBarCodeを入力してね"
-                            value={searchIsbn}
-                            onChange={e => setSearchIsbn(e.target.value)}
-                        />
-                    </div>
-                    <div className="col-sm-2">
-                        {searchLoading || registerLoading ? (
-                            <Button variant="primary" disabled>
-                                <Spinner
-                                    as="span"
-                                    animation="grow"
-                                    size="sm"
-                                    role="status"
-                                    aria-hidden="true"
-                                />
-                                Loading...
-                            </Button>
+        <React.Fragment>
+            <RightMotion>
+                <Grid container spacing={1}>
+                    <Paper elevation={8} style={paperStyle}>
+                        {error ? (
+                            <Alert severity="error">{error.message}</Alert>
                         ) : (
+                            <></>
+                        )}
+                        {isRegister ? (
+                            <Alert severity="success">
+                                書籍の登録に成功しました！
+                            </Alert>
+                        ) : (
+                            <></>
+                        )}
+                        <Grid container alignItems="center" justify="center">
+                            <h2>書籍新規登録</h2>
+                        </Grid>
+                        <Grid container alignItems="center" justify="center">
+                            <TextField
+                                label="BarCode"
+                                placeholder="書籍のBarCodeを入力してね"
+                                style={{ width: "80%" }}
+                                value={searchIsbn}
+                                onChange={e => setSearchIsbn(e.target.value)}
+                            />
                             <Button
-                                variant="primary"
+                                color="primary"
+                                variant="contained"
+                                style={{ width: "20%" }}
                                 onClick={() => {
                                     if (!searchIsbn) {
                                         alert("コードが入力されていません");
@@ -137,161 +122,145 @@ const RegisterBook = (props: any) => {
                                     }
                                     searchRegisterBook(searchIsbn);
                                 }}
-                                disabled={searchLoading}
+                                disabled={searchLoading || registerLoading}
                             >
-                                検索
+                                {searchLoading || registerLoading ? (
+                                    <CircularProgress />
+                                ) : (
+                                    "書籍検索"
+                                )}
                             </Button>
-                        )}
-                    </div>
-                </div>
-                <hr />
-                <div className="form-group row">
-                    <img src={largeImageUrl} />
-                </div>
-                <div className="form-group row">
-                    <label className="col-sm-2 col-form-label">タイトル</label>
-                    <div className="col-sm-10">
-                        <input
-                            type="text"
-                            className="form-control"
+                        </Grid>
+                        <Grid>
+                            <CardMedia
+                                image={largeImageUrl}
+                                style={{
+                                    height: 320,
+                                    backgroundSize: "contain"
+                                }}
+                            />
+                        </Grid>
+                        <TextField
+                            label="タイトル"
                             placeholder="〇〇入門"
+                            fullWidth
                             value={title}
                             onChange={e => setTitle(e.target.value)}
                         />
-                    </div>
-                </div>
-                <div className="form-group row">
-                    <label className="col-sm-2 col-form-label">著者</label>
-                    <div className="col-sm-10">
-                        <input
-                            type="text"
-                            className="form-control"
+                        <TextField
+                            label="著者"
                             placeholder="上田次郎"
+                            fullWidth
                             value={author}
                             onChange={e => setAuthor(e.target.value)}
                         />
-                    </div>
-                </div>
-                <div className="form-group row">
-                    <label className="col-sm-2 col-form-label">出版</label>
-                    <div className="col-sm-10">
-                        <input
-                            type="text"
-                            className="form-control"
+                        <TextField
+                            label="出版"
                             placeholder="竹書房"
+                            fullWidth
                             value={publisher}
                             onChange={e => setPublisher(e.target.value)}
                         />
-                    </div>
-                </div>
-                <div className="form-group row">
-                    <label className="col-sm-2 col-form-label">説明</label>
-                    <div className="col-sm-10">
-                        <textarea
-                            id="textarea1"
-                            className="form-control"
+                        <TextField
+                            label="説明"
+                            placeholder=""
+                            fullWidth
                             value={caption}
                             onChange={e => setCaption(e.target.value)}
-                        ></textarea>
-                    </div>
-                </div>
-                <div className="form-group row">
-                    <label className="col-sm-2 col-form-label">ISBN13</label>
-                    <div className="col-sm-10">
-                        <input
-                            type="text"
-                            className="form-control"
+                        />
+                        <TextField
+                            label="ISBN"
                             placeholder="1234678910"
+                            fullWidth
                             value={isbn}
                             onChange={e => setIsbn(e.target.value)}
                         />
-                    </div>
-                </div>
-                <div className="form-group row">
-                    <label className="col-sm-2 col-form-label">商品URL</label>
-                    <div className="col-sm-10">
-                        <input
-                            type="text"
-                            className="form-control"
-                            placeholder="https://〇〇〇〇〇〇"
+                        <TextField
+                            label="商品URL"
+                            placeholder="〇〇〇〇〇〇"
+                            fullWidth
                             value={itemUrl}
                             onChange={e => setItemUrl(e.target.value)}
                         />
-                    </div>
-                </div>
-                <div className="form-group row">
-                    <label className="col-sm-2 col-form-label">発売日</label>
-                    <div className="col-sm-10">
-                        <input
-                            type="text"
-                            className="form-control"
+                        <TextField
+                            label="発売日"
                             placeholder="2020/01頃"
+                            fullWidth
                             value={salesDate}
                             onChange={e => setSalesDate(e.target.value)}
                         />
-                    </div>
-                </div>
-                <div className="form-group row">
-                    <label className="col-sm-2 col-form-label">値段</label>
-                    <div className="col-sm-10">
-                        <input
-                            type="text"
-                            className="form-control"
+                        <TextField
+                            label="値段"
                             placeholder="500円"
+                            fullWidth
                             value={price}
                             onChange={e => setPrice(e.target.value)}
                         />
-                    </div>
-                </div>
-                <div className="form-group row">
-                    <label className="col-sm-2 col-form-label">サイズ</label>
-                    <div className="col-sm-10">
-                        <input
-                            type="text"
-                            className="form-control"
+                        <TextField
+                            label="サイズ"
                             placeholder="文庫本"
+                            fullWidth
                             value={size}
                             onChange={e => setSize(e.target.value)}
                         />
-                    </div>
-                </div>
-                {searchLoading || registerLoading ? (
-                    <Button variant="primary" disabled block={true}>
-                        <Spinner
-                            as="span"
-                            animation="grow"
-                            size="sm"
-                            role="status"
-                            aria-hidden="true"
-                        />
-                        Loading...
-                    </Button>
-                ) : (
-                    <Button
-                        variant="primary"
-                        onClick={async () => {
-                            await registerBook(
-                                title,
-                                author,
-                                caption,
-                                publisher,
-                                isbn,
-                                largeImageUrl,
-                                mediumImageUrl,
-                                smallImageUrl,
-                                itemUrl,
-                                salesDate,
-                                price,
-                                size
-                            );
+                        <div
+                            style={{
+                                top: 10
+                            }}
+                        >
+                            <Button
+                                color="primary"
+                                variant="contained"
+                                fullWidth
+                                onClick={async () => {
+                                    await registerBook(
+                                        title,
+                                        author,
+                                        caption,
+                                        publisher,
+                                        isbn,
+                                        largeImageUrl,
+                                        mediumImageUrl,
+                                        smallImageUrl,
+                                        itemUrl,
+                                        salesDate,
+                                        price,
+                                        size
+                                    );
+                                }}
+                                disabled={searchLoading || registerLoading}
+                            >
+                                {searchLoading || registerLoading ? (
+                                    <CircularProgress />
+                                ) : (
+                                    "登録"
+                                )}
+                            </Button>
+                        </div>
+                    </Paper>
+                    <div
+                        style={{
+                            margin: 0,
+                            top: "auto",
+                            right: 20,
+                            bottom: 20,
+                            left: "auto",
+                            position: "fixed"
                         }}
-                        block={true}
                     >
-                        登録
-                    </Button>
-                )}
-            </Container>
-        </>
+                        <Fab
+                            color="secondary"
+                            aria-label="add"
+                            onClick={() => {
+                                props.history.push("/");
+                            }}
+                        >
+                            <ArrowBack />
+                        </Fab>
+                    </div>
+                </Grid>
+            </RightMotion>
+        </React.Fragment>
     );
 };
 

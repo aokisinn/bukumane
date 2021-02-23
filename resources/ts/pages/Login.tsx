@@ -1,77 +1,82 @@
 import React, { useState, useEffect } from "react";
 import RightMotion from "../components/motion/RightMotion";
-import { Button, Container, Jumbotron } from "react-bootstrap";
 import { useAuth } from "../context/auth/useAuth";
+import { Grid, Paper, TextField, Button } from "@material-ui/core";
+import Alert from "@material-ui/lab/Alert";
 
 const Login = (props: any) => {
-    const { signIn, authUser } = useAuth();
+    const { signIn, authUser, error } = useAuth();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+
+    const paperStyle = {
+        padding: 20,
+        width: 280,
+        margin: "20px auto"
+    };
+    const btnstyle = { margin: "8px 0" };
 
     useEffect(() => {
         authUser && props.history.push("/");
     }, [authUser]);
 
     return (
-        <>
+        <React.Fragment>
             <RightMotion>
-                <>
-                    <Jumbotron>
-                        <Container>
-                            <h1 className="display-1">ログイン</h1>
-                        </Container>
-                    </Jumbotron>
-                    <Container>
-                        <h1>{authUser?.name}</h1>
-                        <div className="form-group row">
-                            <label className="col-sm-2 col-form-label">
-                                Email
-                            </label>
-                            <div className="col-sm-6">
-                                <input
-                                    type="text"
-                                    className="form-control"
-                                    placeholder="test@mediaxis.jp"
-                                    value={email}
-                                    onChange={e => setEmail(e.target.value)}
-                                />
-                            </div>
-                        </div>
-                        <div className="form-group row">
-                            <label className="col-sm-2 col-form-label">
-                                Password
-                            </label>
-                            <div className="col-sm-6">
-                                <input
-                                    type="password"
-                                    className="form-control"
-                                    placeholder="パスワード"
-                                    value={password}
-                                    onChange={e => setPassword(e.target.value)}
-                                />
-                            </div>
-                        </div>
+                <Grid>
+                    <Paper elevation={8} style={paperStyle}>
+                        {error ? (
+                            <Alert severity="error">{error.message}</Alert>
+                        ) : (
+                            <></>
+                        )}
+
+                        <Grid container alignItems="center" justify="center">
+                            <h2>ログイン</h2>
+                        </Grid>
+                        <TextField
+                            label="メールアドレス"
+                            placeholder="メールアドレス"
+                            fullWidth
+                            required
+                            value={email}
+                            onChange={e => setEmail(e.target.value)}
+                        />
+                        <TextField
+                            label="パスワード"
+                            placeholder="パスワード（8〜16文字の半角英数字）"
+                            type="password"
+                            fullWidth
+                            required
+                            value={password}
+                            onChange={e => setPassword(e.target.value)}
+                        />
                         <Button
-                            variant="primary"
+                            color="primary"
+                            variant="contained"
+                            style={btnstyle}
+                            fullWidth
                             onClick={() => {
-                                // TODO フロントバリデーションどうするか様検討
                                 signIn(email, password);
                             }}
                         >
-                            ログイン
+                            サインイン
                         </Button>
                         <Button
-                            variant="primary"
+                            color="secondary"
+                            variant="contained"
+                            style={btnstyle}
+                            fullWidth
                             onClick={() => {
                                 props.history.push("/signup");
                             }}
                         >
-                            アカウント作成
+                            新規会員登録
                         </Button>
-                    </Container>
-                </>
+                    </Paper>
+                </Grid>
             </RightMotion>
-        </>
+        </React.Fragment>
     );
 };
 
