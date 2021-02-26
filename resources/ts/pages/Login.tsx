@@ -62,17 +62,6 @@ const Login = (props: any) => {
                         >
                             サインイン
                         </Button>
-                        <Button
-                            color="secondary"
-                            variant="contained"
-                            style={btnstyle}
-                            fullWidth
-                            onClick={() => {
-                                props.history.push("/signup");
-                            }}
-                        >
-                            新規会員登録
-                        </Button>
                     </Paper>
                 </Grid>
             </RightMotion>
