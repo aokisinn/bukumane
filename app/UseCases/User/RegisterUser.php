@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Enums\UserRoleType;
 use App\Exceptions\RegistUserExistException;
 use App\Exceptions\RegistUserRoleException;
+use Illuminate\Support\Facades\Hash;
 
 class RegisterUser
 {
@@ -34,7 +35,7 @@ class RegisterUser
         $user->role = UserRoleType::GENERAL;
         $user->name = $name;
         $user->email = $email;
-        $user->password = \Hash::make($password);
+        $user->password = Hash::make($password);
         $user->save();
 
         return $user;

@@ -17,7 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::post('/login', 'Api\User\UserLogin')
     ->name('UserLogin');
 
-
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('/me', 'Api\User\Me')
         ->name('Me');
@@ -40,4 +39,7 @@ Route::middleware('auth:sanctum')->group(function () {
 
     Route::post('/updateUserPassword', 'Api\User\UpdateUserPassword')
         ->name('UpdateUserPassword');
+
+    Route::post('/updateUser', 'Api\User\UpdateUser')
+        ->name('UpdateUser');
 });

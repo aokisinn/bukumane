@@ -5,28 +5,27 @@ namespace App\UseCases\User;
 use App\Models\User;
 use App\Exceptions\NotUserUpdatepPrmissionException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
-use Illuminate\Support\Facades\Hash;
 
-class UpdateUserPassword
+class UpdateUser
 {
     /**
      * @param integer $currentUserId
      * @param integer $updateUserId
-     * @param string $password
-     * @return bool
+     * @param string $name
+     * @return User
      * @throws NotUserUpdatepPrmissionException
      * @throws ModelNotFoundException
      */
-    public function invoke(int $currentUserId, int $updateUserId, string $password): bool
+    public function invoke(int $currentUserId, int $updateUserId, string $name): User
     {
         if ($currentUserId != $updateUserId) {
             throw new NotUserUpdatepPrmissionException();
         }
 
         $user = User::findorfail($updateUserId);
-        $user->password = Hash::make($password);
+        $user->name = $name;
         $user->update();
 
-        return true;
+        return $user;
     }
 }
