@@ -30,4 +30,7 @@ Route::middleware('auth:sanctum')->group(function () {
 
     Route::post('/registerBook', 'Api\Book\RegisterBook')
         ->name('RegisterBook');
+
+    Route::post('/user/registerUser', 'Api\User\RegisterUser')
+        ->name('RegisterUser');
 });
