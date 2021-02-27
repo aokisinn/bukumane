@@ -42,4 +42,10 @@ Route::middleware('auth:sanctum')->group(function () {
 
     Route::post('/updateUser', 'Api\User\UpdateUser')
         ->name('UpdateUser');
+
+    Route::post('/borrowBook', 'Api\Rental\BorrowBook')
+        ->name('BorrowBook');
+
+    Route::post('/returnBook', 'Api\Rental\ReturnBook')
+        ->name('ReturnBook');
 });

@@ -11,7 +11,8 @@ use App\Models\Book;
  * @property int $user_id
  * @property int $book_id
  * @property int $state
- * @property Carbon $rental_date
+ * @property Carbon $borrow_date
+ * @property Carbon $return_date
  * @property Carbon $created_at
  * @property Carbon $updated_at
  */
@@ -24,11 +25,13 @@ class Rental extends Model
         'user_id',
         'book_id',
         'state',
-        'rental_date'
+        'borrow_date',
+        'return_date'
     ];
 
     protected $dates = [
-        'rental_date'
+        'borrow_date',
+        'return_date'
     ];
 
     /**

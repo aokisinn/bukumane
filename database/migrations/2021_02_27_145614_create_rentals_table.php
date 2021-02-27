@@ -18,8 +18,9 @@ class CreateRentalsTable extends Migration
             $table->id();
             $table->integer('user_id');
             $table->integer('book_id');
-            $table->enum('state', [RentalStateType::BORROWING, RentalStateType::RETURN])->default(RentalStateType::BORROWING);
-            $table->timestamp('rental_date');
+            $table->enum('state', [RentalStateType::BORROW, RentalStateType::RETURN])->default(RentalStateType::BORROW);
+            $table->timestamp('borrow_date');
+            $table->timestamp('return_date')->nullable();
             $table->timestamps();
         });
     }
