@@ -2,10 +2,11 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import BottomNavigation from "@material-ui/core/BottomNavigation";
 import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
-import Settings from "@material-ui/icons/Settings";
+import SupervisedUserCircle from "@material-ui/icons/SupervisedUserCircle";
 import Search from "@material-ui/icons/Search";
 import Book from "@material-ui/icons/Book";
 import { Grid } from "@material-ui/core";
+import { withRouter } from "react-router";
 
 const useStyles = makeStyles({
     root: {
@@ -30,12 +31,30 @@ const NavBar = (props: any) => {
                     width: "100%"
                 }}
             >
-                <BottomNavigationAction label="一覧" icon={<Book />} />
-                <BottomNavigationAction label="検索" icon={<Search />} />
-                <BottomNavigationAction label="設定" icon={<Settings />} />
+                <BottomNavigationAction
+                    label="一覧"
+                    icon={<Book />}
+                    onClick={() => {
+                        props.history.push("/");
+                    }}
+                />
+                <BottomNavigationAction
+                    label="検索"
+                    icon={<Search />}
+                    onClick={() => {
+                        // props.history.push("/book/register");
+                    }}
+                />
+                <BottomNavigationAction
+                    label="ユーザー"
+                    icon={<SupervisedUserCircle />}
+                    onClick={() => {
+                        props.history.push("/user/list");
+                    }}
+                />
             </BottomNavigation>
         </Grid>
     );
 };
 
-export default NavBar;
+export default withRouter(NavBar);

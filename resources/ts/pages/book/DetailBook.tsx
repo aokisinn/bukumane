@@ -1,16 +1,24 @@
 import React, { useState, useEffect } from "react";
 import RightMotion from "../../components/motion/RightMotion";
 import { useAuth } from "../../context/auth/useAuth";
-import NavBar from "../../components/NavBar";
-import UserCard from "../../components/UserCard";
-import Grid from "@material-ui/core/Grid";
-import { useUserList } from "../../hooks/useUserList";
+import { useRegisterBook } from "../../hooks/useRegisterBook";
+import { Grid, TextField, Button, Paper } from "@material-ui/core";
 import Fab from "@material-ui/core/Fab";
-import AddIcon from "@material-ui/icons/Add";
+import ArrowBack from "@material-ui/icons/ArrowBack";
+import CircularProgress from "@material-ui/core/CircularProgress";
+import Snackbar from "@material-ui/core/Snackbar";
+import Alert from "@material-ui/lab/Alert";
+import CardMedia from "@material-ui/core/CardMedia";
 
-const UserList = (props: any) => {
+const RegisterBook = (props: any) => {
     const { authUser, setCurrentUser } = useAuth();
-    const { getUserList, userList } = useUserList();
+    // const { getBookList, bookList } = useBookList();
+
+    const paperStyle = {
+        padding: 20,
+        width: "80%",
+        margin: "20px auto"
+    };
 
     useEffect(() => {
         setCurrentUser().then(currentUser => {
@@ -18,21 +26,13 @@ const UserList = (props: any) => {
                 return props.history.push("/login");
             }
         });
-        getUserList();
     }, []);
 
     return (
         <React.Fragment>
-            <NavBar />
             <RightMotion>
                 <Grid container spacing={1}>
-                    {userList?.map(function(user) {
-                        return (
-                            <Grid item xs={12} md={3} lg={3} xl={2}>
-                                <UserCard user={user} />
-                            </Grid>
-                        );
-                    })}
+                    <Paper elevation={8} style={paperStyle}></Paper>
                 </Grid>
             </RightMotion>
             <div
@@ -46,17 +46,17 @@ const UserList = (props: any) => {
                 }}
             >
                 <Fab
-                    color="primary"
+                    color="secondary"
                     aria-label="add"
                     onClick={() => {
-                        props.history.push("/user/register");
+                        props.history.push("/");
                     }}
                 >
-                    <AddIcon />
+                    <ArrowBack />
                 </Fab>
             </div>
         </React.Fragment>
     );
 };
 
-export default UserList;
+export default RegisterBook;

@@ -39,7 +39,8 @@ export const useProvideAuth = (): AuthType => {
                             setAuthUser({
                                 id: res.data.user.id,
                                 name: res.data.user.name,
-                                address: res.data.user.address
+                                address: res.data.user.email,
+                                role: res.data.role
                             });
                         })
                         .catch(err => {
@@ -67,7 +68,8 @@ export const useProvideAuth = (): AuthType => {
                 const authUser = {
                     id: res.data.id,
                     name: res.data.name,
-                    address: res.data.email
+                    address: res.data.email,
+                    role: res.data.role
                 };
 
                 setAuthUser(authUser);
