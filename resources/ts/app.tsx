@@ -8,6 +8,7 @@ import UpdateUser from "./pages/user/UpdateUser";
 import UpdateUserPassword from "./pages/user/UpdateUserPassword";
 import UserList from "./pages/user/UserList";
 import RegisterBook from "./pages/book/RegisterBook";
+import RelativeBook from "./pages/book/RelativeBook";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import AuthProvider from "./context/auth/AuthProvider";
@@ -41,6 +42,11 @@ const App: React.FC = () => {
                             exact
                             path="/book/register"
                             component={RegisterBook}
+                        />
+                        <Route
+                            exact
+                            path="/book/relative"
+                            component={RelativeBook}
                         />
                     </Switch>
                 </main>

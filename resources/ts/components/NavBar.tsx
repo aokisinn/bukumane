@@ -42,7 +42,7 @@ const NavBar = (props: any) => {
                     label="検索"
                     icon={<Search />}
                     onClick={() => {
-                        // props.history.push("/book/register");
+                        props.history.push("/book/relative");
                     }}
                 />
                 <BottomNavigationAction
