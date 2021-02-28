@@ -11,17 +11,18 @@ use Illuminate\Support\Facades\Hash;
 class RegisterUser
 {
     /**
-     * @param int $role
+     * @param int $currentUserRole
      * @param string $email
      * @param string $name
      * @param string $password
+     * @param string $role
      * @return User
      * @throws RegistUserExistException
      * @throws RegistUserRoleException
      */
-    public function invoke(int $role, string $email, string $name, string $password): User
+    public function invoke(int $currentUserRole, string $email, string $name, string $password, string $role): User
     {
-        if ($role != UserRoleType::ADMIN) {
+        if ($currentUserRole != UserRoleType::ADMIN) {
             throw new RegistUserRoleException();
         }
 

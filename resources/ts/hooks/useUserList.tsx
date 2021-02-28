@@ -2,8 +2,6 @@ import React from "react";
 import { useCallback, useState } from "react";
 import apiClient from "../utils/apiClient";
 import { AuthUserType } from "../types/AuthUserType";
-import Fab from "@material-ui/core/Fab";
-import AddIcon from "@material-ui/icons/Add";
 
 export const useUserList = () => {
     const [userList, setUserList] = useState<Array<AuthUserType>>([]);

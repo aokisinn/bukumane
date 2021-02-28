@@ -17,10 +17,11 @@ class RegisterUser extends Controller
     {
         try {
             $user = $useCase->invoke(
-                UserRoleType::ADMIN,
+                $request->user()->role,
                 $request->get('email'),
                 $request->get('name'),
-                $request->get('password')
+                $request->get('password'),
+                $request->get('role')
             );
 
             return response()

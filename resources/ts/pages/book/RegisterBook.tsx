@@ -90,7 +90,7 @@ const RegisterBook = (props: any) => {
         <React.Fragment>
             <RightMotion>
                 <Grid container spacing={1}>
-                    <Paper elevation={8} style={paperStyle}>
+                    <Paper elevation={12} style={paperStyle}>
                         {error ? (
                             <Alert severity="error">{error.message}</Alert>
                         ) : (
