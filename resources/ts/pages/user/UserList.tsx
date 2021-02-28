@@ -7,6 +7,7 @@ import Grid from "@material-ui/core/Grid";
 import { useUserList } from "../../hooks/useUserList";
 import Fab from "@material-ui/core/Fab";
 import AddIcon from "@material-ui/icons/Add";
+import { isAdmin } from "../../types/AuthUserType";
 
 const UserList = (props: any) => {
     const { authUser, setCurrentUser } = useAuth();
@@ -35,26 +36,28 @@ const UserList = (props: any) => {
                     })}
                 </Grid>
             </RightMotion>
-            <div
-                style={{
-                    margin: 0,
-                    top: "auto",
-                    right: 20,
-                    bottom: 20,
-                    left: "auto",
-                    position: "fixed"
-                }}
-            >
-                <Fab
-                    color="primary"
-                    aria-label="add"
-                    onClick={() => {
-                        props.history.push("/user/register");
+            {isAdmin(authUser?.role) ? (
+                <div
+                    style={{
+                        margin: 0,
+                        top: "auto",
+                        right: 20,
+                        bottom: 20,
+                        left: "auto",
+                        position: "fixed"
                     }}
                 >
-                    <AddIcon />
-                </Fab>
-            </div>
+                    <Fab
+                        color="primary"
+                        aria-label="add"
+                        onClick={() => {
+                            props.history.push("/user/register");
+                        }}
+                    >
+                        <AddIcon />
+                    </Fab>
+                </div>
+            ) : null}
         </React.Fragment>
     );
 };
