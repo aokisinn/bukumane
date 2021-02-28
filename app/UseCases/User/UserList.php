@@ -16,9 +16,9 @@ class UserList
      */
     public function invoke(int $role): Collection
     {
-        if ($role != UserRoleType::ADMIN) {
-            throw new RegistUserRoleException();
-        }
+        // if ($role != UserRoleType::ADMIN) {
+        //     throw new RegistUserRoleException();
+        // }
 
         return User::all();
     }
