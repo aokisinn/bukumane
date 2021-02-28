@@ -3,6 +3,7 @@
 use Illuminate\Database\Seeder;
 use App\Models\User;
 use App\Enums\UserRoleType;
+use Illuminate\Support\Facades\Hash;
 
 class UserTableSeeder extends Seeder
 {
@@ -16,8 +17,8 @@ class UserTableSeeder extends Seeder
         $user = new User();
         $user->role = UserRoleType::ADMIN;
         $user->name = "aoki";
-        $user->email = "aoki@test.jp";
-        $user->password = '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi'; // password
+        $user->email = "aoki_s@mediaxis.jp";
+        $user->password =  Hash::make('q4N7ZtvS');
 
         $user->save();
     }

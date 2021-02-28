@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
-import { DetailBook, Home, Login, RegisterBook, RegisterUser, UpdateUser, UpdateUserPassword, UserList } from './pages/index';
+import { DetailBook, Home, Login, RegisterBook, RelativeBook, RegisterUser, UpdateUser, UpdateUserPassword, UserList } from './pages/index';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import AuthProvider from "./context/auth/AuthProvider";
@@ -40,6 +40,11 @@ const App: React.FC = () => {
                             exact
                             path="/book/detail/:id"
                             component={DetailBook}
+                        />
+                        <Route
+                            exact
+                            path="/book/relative"
+                            component={RelativeBook}
                         />
                     </Switch>
                 </main>

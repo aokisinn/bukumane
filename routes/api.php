@@ -51,4 +51,7 @@ Route::middleware('auth:sanctum')->group(function () {
 
     Route::post('/findBook', 'Api\Book\FindBook')
         ->name('FindBook');
+
+    Route::post('/relativeBook', 'Api\Book\RelativeBook')
+        ->name('RelativeBook');
 });

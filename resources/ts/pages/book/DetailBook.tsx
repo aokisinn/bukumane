@@ -109,7 +109,7 @@ const DetailBook = (props: any) => {
                             支援ツールを使いこなし効率的に実装をする基礎知識。複数の支援ツールから「なぜそれを使うのか」選択する基準を理解する。
                         </Typography>
                     </CardContent>
-
+                    
                 </Card>
             </RightMotion>
             <div
