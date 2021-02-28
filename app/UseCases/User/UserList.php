@@ -19,6 +19,7 @@ class UserList
         // if ($role != UserRoleType::ADMIN) {
         //     throw new RegistUserRoleException();
         // }
+
         return User::all();
     }
 }
