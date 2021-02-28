@@ -9,6 +9,7 @@ export type AuthType = {
         email: string | null | undefined,
         password: string | null | undefined
     ) => Promise<void>;
+    setCurrentUser: () => Promise<AuthUserType | void>;
     loading: boolean;
     error: Error | undefined;
 };
@@ -38,7 +39,8 @@ export const useProvideAuth = (): AuthType => {
                             setAuthUser({
                                 id: res.data.user.id,
                                 name: res.data.user.name,
-                                address: res.data.user.address
+                                address: res.data.user.email,
+                                role: res.data.role
                             });
                         })
                         .catch(err => {
@@ -56,5 +58,31 @@ export const useProvideAuth = (): AuthType => {
         []
     );
 
-    return { authUser, signIn, loading, error };
+    const setCurrentUser = useCallback(async (): Promise<AuthUserType | void> => {
+        setLoading(true);
+
+        const currentUser = await apiClient
+            .get("/api/me")
+            .then(res => {
+                setLoading(false);
+                const authUser = {
+                    id: res.data.id,
+                    name: res.data.name,
+                    address: res.data.email,
+                    role: res.data.role
+                };
+
+                setAuthUser(authUser);
+                return authUser;
+            })
+            .catch(err => {
+                console.log(err.response);
+                setLoading(false);
+                setError(new Error("ユーザー情報の取得に失敗しました。"));
+            });
+
+        return currentUser;
+    }, []);
+
+    return { authUser, setCurrentUser, signIn, loading, error };
 };

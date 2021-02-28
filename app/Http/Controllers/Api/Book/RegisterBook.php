@@ -16,19 +16,19 @@ class RegisterBook extends Controller
     {
         try {
             $book = $useCase->invoke(
-                "1",
-                $request->get('title'),
-                $request->get('author'),
-                $request->get('caption'),
-                $request->get('publisher'),
+                $request->user()->id,
+                $request->get('title') ?? "",
+                $request->get('author') ?? "",
+                $request->get('caption') ?? "",
+                $request->get('publisher') ?? "",
                 $request->get('isbn'),
                 $request->get('largeImageUrl'),
                 $request->get('mediumImageUrl'),
                 $request->get('smallImageUrl'),
-                $request->get('itemUrl'),
-                $request->get('salesDate'),
-                $request->get('price'),
-                $request->get('size'),
+                $request->get('itemUrl') ?? "",
+                $request->get('salesDate') ?? "",
+                $request->get('price') ?? "",
+                $request->get('size') ?? ""
             );
 
             return $book;

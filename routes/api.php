@@ -18,9 +18,8 @@ Route::post('/login', 'Api\User\UserLogin')
     ->name('UserLogin');
 
 Route::middleware('auth:sanctum')->group(function () {
-    Route::get('/user', function (Request $request) {
-        return $request->user();
-    });
+    Route::get('/me', 'Api\User\Me')
+        ->name('Me');
 
     // TODO とりあえず全取得 後日 ページネーション　実装 apiの名前見直し
     Route::get('/bookList', 'Api\Book\BookList')
@@ -31,4 +30,25 @@ Route::middleware('auth:sanctum')->group(function () {
 
     Route::post('/registerBook', 'Api\Book\RegisterBook')
         ->name('RegisterBook');
+
+    Route::post('/registerUser', 'Api\User\RegisterUser')
+        ->name('RegisterUser');
+
+    Route::get('/userList', 'Api\User\UserList')
+        ->name('UserList');
+
+    Route::post('/updateUserPassword', 'Api\User\UpdateUserPassword')
+        ->name('UpdateUserPassword');
+
+    Route::post('/updateUser', 'Api\User\UpdateUser')
+        ->name('UpdateUser');
+
+    Route::post('/borrowBook', 'Api\Rental\BorrowBook')
+        ->name('BorrowBook');
+
+    Route::post('/returnBook', 'Api\Rental\ReturnBook')
+        ->name('ReturnBook');
+
+    Route::post('/findBook', 'Api\Book\FindBook')
+        ->name('FindBook');
 });
