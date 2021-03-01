@@ -18,7 +18,7 @@ export const useUserList = () => {
                     return {
                         id: user.id,
                         name: user.name,
-                        address: user.email,
+                        loginId: user.login_id,
                         role: user.role
                     };
                 });

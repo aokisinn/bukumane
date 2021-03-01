@@ -6,7 +6,7 @@ import { AuthUserType } from "../../types/AuthUserType";
 export type AuthType = {
     authUser: AuthUserType | null;
     signIn: (
-        email: string | null | undefined,
+        loginId: string | null | undefined,
         password: string | null | undefined
     ) => Promise<void>;
     setCurrentUser: () => Promise<AuthUserType | void>;
@@ -21,7 +21,7 @@ export const useProvideAuth = (): AuthType => {
 
     const signIn = useCallback(
         async (
-            email: string | null | undefined,
+            loginId: string | null | undefined,
             password: string | null | undefined
         ): Promise<void> => {
             // TODO　処理が見辛いのでsanctum/csrf-cookie 外だし
@@ -31,15 +31,14 @@ export const useProvideAuth = (): AuthType => {
                 .then(response => {
                     apiClient
                         .post("/api/login", {
-                            email,
+                            loginId,
                             password
                         })
                         .then(res => {
                             setLoading(false);
                             setAuthUser({
                                 id: res.data.user.id,
-                                name: res.data.user.name,
-                                address: res.data.user.email,
+                                loginId: res.data.user.login_id,
                                 role: res.data.role
                             });
                         })
@@ -67,8 +66,7 @@ export const useProvideAuth = (): AuthType => {
                 setLoading(false);
                 const authUser = {
                     id: res.data.id,
-                    name: res.data.name,
-                    address: res.data.email,
+                    loginId: res.data.login_id,
                     role: res.data.role
                 };
 

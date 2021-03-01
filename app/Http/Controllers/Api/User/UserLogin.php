@@ -14,7 +14,7 @@ class UserLogin extends Controller
     {
         try {
             $user = $useCase->invoke(
-                $request->get('email'),
+                $request->get('loginId'),
                 $request->get('password')
             );
 

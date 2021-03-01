@@ -6,7 +6,7 @@ import Alert from "@material-ui/lab/Alert";
 
 const Login = (props: any) => {
     const { signIn, authUser, error } = useAuth();
-    const [email, setEmail] = useState("");
+    const [loginId, setLoginId] = useState("");
     const [password, setPassword] = useState("");
 
     const paperStyle = {
@@ -35,12 +35,12 @@ const Login = (props: any) => {
                             <h2>ログイン</h2>
                         </Grid>
                         <TextField
-                            label="メールアドレス"
-                            placeholder="メールアドレス"
+                            label="ユーザーID"
+                            placeholder="testId"
                             fullWidth
                             required
-                            value={email}
-                            onChange={e => setEmail(e.target.value)}
+                            value={loginId}
+                            onChange={e => setLoginId(e.target.value)}
                         />
                         <TextField
                             label="パスワード"
@@ -57,7 +57,7 @@ const Login = (props: any) => {
                             style={btnstyle}
                             fullWidth
                             onClick={() => {
-                                signIn(email, password);
+                                signIn(loginId, password);
                             }}
                         >
                             サインイン

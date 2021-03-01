@@ -16,14 +16,13 @@ class UpdateUser
      * @throws NotUserUpdatepPrmissionException
      * @throws ModelNotFoundException
      */
-    public function invoke(int $currentUserId, int $updateUserId, string $name): User
+    public function invoke(int $currentUserId, int $updateUserId): User
     {
         if ($currentUserId != $updateUserId) {
             throw new NotUserUpdatepPrmissionException();
         }
 
         $user = User::findorfail($updateUserId);
-        $user->name = $name;
         $user->update();
 
         return $user;
