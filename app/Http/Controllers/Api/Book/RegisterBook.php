@@ -35,7 +35,6 @@ class RegisterBook extends Controller
         } catch (RegistBookException $e) {
             return response()->apiError($e->getMessage(), [], 401);
         } catch (\Exception $e) {
-            \Log::alert($e);
             return response()->apiError("原因不明のエラーが発生しました。", [], 401);
         }
     }

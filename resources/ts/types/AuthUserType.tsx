@@ -4,8 +4,7 @@ export type AdminRole = "999";
 
 export type AuthUserType = {
     id: number;
-    name: string;
-    address: string;
+    loginId: string;
     // TODO 権限に関する値は要調整
     role: GeneralRole | AdminRole;
 };

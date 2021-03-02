@@ -18,8 +18,7 @@ class RegisterUser extends Controller
         try {
             $user = $useCase->invoke(
                 $request->user()->role,
-                $request->get('email'),
-                $request->get('name'),
+                $request->get('loginId'),
                 $request->get('password'),
                 $request->get('role')
             );

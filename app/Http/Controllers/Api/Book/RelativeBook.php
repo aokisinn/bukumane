@@ -18,7 +18,6 @@ class RelativeBook extends Controller
 
             return new BookCollection($book);
         } catch (\Exception $e) {
-            \Log::alert($e);
             return response()->apiError("原因不明のエラーが発生しました。", [], 401);
         }
     }

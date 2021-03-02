@@ -11,10 +11,7 @@ const UserCard: React.FC<{
         <Card>
             <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
-                    名前: {user.name}
-                </Typography>
-                <Typography gutterBottom variant="h5" component="h2">
-                    アドレス : {user.address}
+                    userId : {user.loginId}
                 </Typography>
             </CardContent>
         </Card>

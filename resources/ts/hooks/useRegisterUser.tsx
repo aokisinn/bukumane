@@ -10,8 +10,7 @@ export const useRegisterUser = () => {
 
     const registerUser = useCallback(
         async (
-            name: string,
-            email: string,
+            loginId: string,
             password: string,
             role: AdminRole | GeneralRole | undefined
         ): Promise<void> => {
@@ -20,8 +19,7 @@ export const useRegisterUser = () => {
             setIsRegister(false);
             apiClient
                 .post("/api/registerUser", {
-                    name,
-                    email,
+                    loginId,
                     password,
                     role
                 })

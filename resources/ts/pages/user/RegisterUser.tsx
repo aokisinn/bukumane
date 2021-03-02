@@ -20,8 +20,7 @@ const RegisterUser = (props: any) => {
     const { setCurrentUser } = useAuth();
     const { registerUser, error, loading, isRegister } = useRegisterUser();
 
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
+    const [loginId, setLoginId] = useState("");
     const [password, setPassword] = useState("");
     const [role, setRole] = useState<AdminRole | GeneralRole>("0");
 
@@ -62,20 +61,12 @@ const RegisterUser = (props: any) => {
                             <h2>アカウント作成</h2>
                         </Grid>
                         <TextField
-                            label="名前"
-                            placeholder="〇〇太郎"
+                            label="ユーザーID"
+                            placeholder="testID"
                             fullWidth
                             required
-                            value={name}
-                            onChange={e => setName(e.target.value)}
-                        />
-                        <TextField
-                            label="メールアドレス"
-                            placeholder="メールアドレス"
-                            fullWidth
-                            required
-                            value={email}
-                            onChange={e => setEmail(e.target.value)}
+                            value={loginId}
+                            onChange={e => setLoginId(e.target.value)}
                         />
                         <TextField
                             label="パスワード"
@@ -105,7 +96,7 @@ const RegisterUser = (props: any) => {
                             style={btnstyle}
                             fullWidth
                             onClick={() => {
-                                registerUser(name, email, password, role);
+                                registerUser(loginId, password, role);
                             }}
                         >
                             サインイン
