@@ -11,7 +11,6 @@ import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
-import { BookType } from "../types/BookType";
 
 const useStyles = makeStyles({
         paperStyle: {
@@ -66,19 +65,19 @@ const DetailBook = (props: any) => {
         });
         findBook(bookId);
     }, []);
-    // console.log('book', book);
+
+    //登録日(YYYY-MM-DD)
+    const registerDate = book?.created_at?.slice(0,10);    
+
+    //金額(3桁区切り)
+    const bookPrice = String(book?.price).replace( /(\d)(?=(\d\d\d)+(?!\d))/g, '$1,');
     
     return (
         <React.Fragment>
             <RightMotion>
-                {/* TODO:見た目こっち使ったほうが統一感出るかも */}
-                {/* <Grid container spacing={1}>
-                    <Paper elevation={8} className={classes.paperStyle}>
-                    </Paper>
-                </Grid> */}
                 <Card className={classes.detailBox}>
                     <Typography className={classes.registerDate} variant="body2" color="textSecondary" component="p">
-                            登録日：2021/02/27
+                            登録日：{registerDate}
                     </Typography>
                     <CardHeader
                         title={book?.title}
@@ -86,13 +85,13 @@ const DetailBook = (props: any) => {
 
                     <CardContent className={classes.subTextBox}>
                         <Typography className={classes.subText} variant="body2" color="textSecondary" component="p">
-                            安達 稜/武田 諭
+                            {book?.author}
                         </Typography>
                         <Typography className={classes.subText} variant="body2" color="textSecondary" component="p">
-                            秀和システム  単行本-2020年10月09日頃
+                            {book?.publisher} / {book?.size} - {book?.sales_date}
                         </Typography>
                         <Typography className={classes.priceText} variant="body2" color="primary" component="p">
-                            ¥3,080
+                            ￥{bookPrice}
                         </Typography>
                     </CardContent>
 
@@ -100,13 +99,13 @@ const DetailBook = (props: any) => {
 
                     <CardMedia
                         className={classes.bookMedia}
-                        image="https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/1771/9784798061771.jpg?_ex=200x200"
-                        title="フロントエンド開発入門 プロフェッショナルな開発ツールと設計・実装"
+                        image={book?.large_image_url ?? "../images/no_image.png"}
+                        title="画像"
                     />
 
                     <CardContent>
                         <Typography className={classes.subText} variant="body2" color="textSecondary" component="p">
-                            支援ツールを使いこなし効率的に実装をする基礎知識。複数の支援ツールから「なぜそれを使うのか」選択する基準を理解する。
+                            {book?.caption}
                         </Typography>
                     </CardContent>
                     
