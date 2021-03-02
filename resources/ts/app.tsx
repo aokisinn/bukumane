@@ -1,14 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
-import Home from "./pages/Home";
-import Login from "./pages/Login";
-import RegisterUser from "./pages/user/RegisterUser";
-import UpdateUser from "./pages/user/UpdateUser";
-import UpdateUserPassword from "./pages/user/UpdateUserPassword";
-import UserList from "./pages/user/UserList";
-import RegisterBook from "./pages/book/RegisterBook";
-import RelativeBook from "./pages/book/RelativeBook";
+import { DetailBook, Home, Login, RegisterBook, RelativeBook, RegisterUser, UpdateUser, UpdateUserPassword, UserList } from './pages/index';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import AuthProvider from "./context/auth/AuthProvider";
@@ -42,6 +35,11 @@ const App: React.FC = () => {
                             exact
                             path="/book/register"
                             component={RegisterBook}
+                        />                        
+                        <Route
+                            exact
+                            path="/book/detail/:id"
+                            component={DetailBook}
                         />
                         <Route
                             exact

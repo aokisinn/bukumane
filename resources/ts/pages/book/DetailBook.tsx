@@ -1,24 +1,61 @@
 import React, { useState, useEffect } from "react";
 import RightMotion from "../../components/motion/RightMotion";
 import { useAuth } from "../../context/auth/useAuth";
-import { useRegisterBook } from "../../hooks/useRegisterBook";
-import { Grid, TextField, Button, Paper } from "@material-ui/core";
+import { useFindBook } from "../../hooks/useFindBook";
 import Fab from "@material-ui/core/Fab";
 import ArrowBack from "@material-ui/icons/ArrowBack";
-import CircularProgress from "@material-ui/core/CircularProgress";
-import Snackbar from "@material-ui/core/Snackbar";
-import Alert from "@material-ui/lab/Alert";
-import CardMedia from "@material-ui/core/CardMedia";
+import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardHeader from '@material-ui/core/CardHeader';
+import CardMedia from '@material-ui/core/CardMedia';
+import CardContent from '@material-ui/core/CardContent';
+import Typography from '@material-ui/core/Typography';
+import Divider from '@material-ui/core/Divider';
 
-const RegisterBook = (props: any) => {
+const useStyles = makeStyles({
+        paperStyle: {
+            padding: 20,
+            width: "80%",
+            margin: "20px auto"
+        },
+        detailBox: {
+            maxWidth: 800,
+            margin: '0 auto',
+            marginTop: 50
+        },
+        bookMedia: {
+            height: 0,
+            paddingTop: '56.25%', // 16:9
+            margin: '0 auto',
+            marginTop: 10,
+            width: '326px'
+        },
+        subTextBox: {
+            padding: '0 16px'
+        },
+        subText: {
+            fontSize: '1rem'
+        },
+        priceText: {
+            textAlign: 'right',
+            fontSize: '20px'
+        },
+        registerDate: {
+            marginTop: 10,
+            marginRight: '16px',
+            textAlign: 'right',
+            fontSize: '0.9rem'
+        }
+});
+
+const paperStyle = {
+};
+
+const DetailBook = (props: any) => {
     const { authUser, setCurrentUser } = useAuth();
-    // const { getBookList, bookList } = useBookList();
-
-    const paperStyle = {
-        padding: 20,
-        width: "80%",
-        margin: "20px auto"
-    };
+    const { findBook, book } = useFindBook();
+    const classes = useStyles();
+    const bookId = props.match.params.id;
 
     useEffect(() => {
         setCurrentUser().then(currentUser => {
@@ -26,14 +63,53 @@ const RegisterBook = (props: any) => {
                 return props.history.push("/login");
             }
         });
+        findBook(bookId);
     }, []);
 
+    //登録日(YYYY-MM-DD)
+    const registerDate = book?.created_at?.slice(0,10);    
+
+    //金額(3桁区切り)
+    const bookPrice = String(book?.price).replace( /(\d)(?=(\d\d\d)+(?!\d))/g, '$1,');
+    
     return (
         <React.Fragment>
             <RightMotion>
-                <Grid container spacing={1}>
-                    <Paper elevation={8} style={paperStyle}></Paper>
-                </Grid>
+                <Card className={classes.detailBox}>
+                    <Typography className={classes.registerDate} variant="body2" color="textSecondary" component="p">
+                            登録日：{registerDate}
+                    </Typography>
+                    <CardHeader
+                        title={book?.title}
+                    />
+
+                    <CardContent className={classes.subTextBox}>
+                        <Typography className={classes.subText} variant="body2" color="textSecondary" component="p">
+                            {book?.author}
+                        </Typography>
+                        <Typography className={classes.subText} variant="body2" color="textSecondary" component="p">
+                            {book?.publisher} / {book?.size} - {book?.sales_date}
+                        </Typography>
+                        <Typography className={classes.priceText} variant="body2" color="primary" component="p">
+                            ￥{bookPrice}
+                        </Typography>
+                    </CardContent>
+
+                    <Divider />
+
+                    <CardMedia
+                        className={classes.bookMedia}
+                        image={book?.large_image_url ?? "../images/no_image.png"}
+                        title="画像"
+                    />
+
+                    <CardContent>
+                        <Typography className={classes.subText} variant="body2" color="textSecondary" component="p">
+                            {book?.caption}
+                        </Typography>
+                    </CardContent>
+                    
+                </Card>
             </RightMotion>
             <div
                 style={{
@@ -59,4 +135,4 @@ const RegisterBook = (props: any) => {
     );
 };
 
-export default RegisterBook;
+export default DetailBook;
