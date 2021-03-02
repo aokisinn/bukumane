@@ -1,11 +1,12 @@
 import React from "react";
-import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
-import { red } from "@material-ui/core/colors";
 import { BookType } from "../types/BookType";
+import { withRouter } from "react-router";
+import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles({
     media: {
@@ -18,11 +19,12 @@ const BookCard: React.FC<{
     book: BookType;
 }> = ({ book }) => {
     const classes = useStyles();
+    const hisotry = useHistory();
 
     return (
         <Card
             onClick={() => {
-                alert("詳細画面は未実装です");
+                hisotry.push("/book/detail/" + book.id);
             }}
         >
             <CardMedia
@@ -41,4 +43,4 @@ const BookCard: React.FC<{
     );
 };
 
-export default BookCard;
+export default withRouter(BookCard);
