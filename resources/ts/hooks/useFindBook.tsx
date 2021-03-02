@@ -7,12 +7,12 @@ export const useFindBook = () => {
     const [book, setBook] = useState<BookType | undefined>(undefined);
     const [error, setError] = useState<Error | undefined>();
 
-    const findBook = useCallback(async (id: any): Promise<void> => {
+    const findBook = useCallback(async (bookId: any): Promise<void> => {
         setError(undefined);
-        console.log(id);
+        console.log(bookId);
         
         apiClient
-            .get("/api/findBook", id)
+            .post("/api/findBook", {bookId})
             .then(res => {
                 console.log(res);
                 
