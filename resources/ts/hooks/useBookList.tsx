@@ -7,11 +7,17 @@ export const useBookList = () => {
     const [bookList, setBookList] = useState<Array<BookType>>([]);
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<Error | undefined>();
+    const [currentPage, setCurrentPage] = useState(0);
+    const [isLastPage, setIsLastPage] = useState(false);
 
-    const getBookList = useCallback(async (): Promise<void> => {
+    const getBookList = async (): Promise<void> => {
         setLoading(true);
         apiClient
-            .get("/api/bookList")
+            .get("/api/bookList", {
+                params: {
+                    page: currentPage + 1
+                }
+            })
             .then(res => {
                 setLoading(false);
                 const books = res.data.books.map(function(book) {
@@ -34,14 +40,19 @@ export const useBookList = () => {
                     };
                 });
 
-                setBookList(books);
+                bookList.push(...books);
+                setBookList(bookList);
+                setCurrentPage(res.data.meta.current_page);
+                if (res.data.links.next == null) {
+                    setIsLastPage(true);
+                }
             })
             .catch(err => {
                 console.log(err.response);
                 setLoading(false);
                 setError(new Error("書籍情報の取得に失敗しました"));
             });
-    }, []);
+    };
 
-    return { getBookList, bookList, loading, error };
+    return { getBookList, bookList, loading, error, isLastPage };
 };

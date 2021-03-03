@@ -10,6 +10,6 @@ class BookList extends Controller
 {
     public function __invoke()
     {
-        return new BookCollection(Book::all());
+        return new BookCollection(Book::paginate(30));
     }
 }

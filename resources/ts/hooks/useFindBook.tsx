@@ -6,16 +6,19 @@ import { BookType } from "../types/BookType";
 export const useFindBook = () => {
     const [book, setBook] = useState<BookType | undefined>(undefined);
     const [error, setError] = useState<Error | undefined>();
+    const [loading, setLoading] = useState<boolean>(false);
 
     const findBook = useCallback(async (bookId: any): Promise<void> => {
         setError(undefined);
+        setLoading(true);
         console.log(bookId);
-        
+
         apiClient
-            .post("/api/findBook", {bookId})
+            .post("/api/findBook", { bookId })
             .then(res => {
                 console.log(res);
-                
+                setLoading(false);
+
                 const book = {
                     id: res.data.book?.id,
                     title: res.data.book?.title,
@@ -38,6 +41,7 @@ export const useFindBook = () => {
             })
             .catch(err => {
                 console.log(err.response);
+                setLoading(false);
                 setError(
                     new Error(
                         err.response.data?.message ??
@@ -47,5 +51,5 @@ export const useFindBook = () => {
             });
     }, []);
 
-    return { findBook, book, error };
+    return { findBook, book, error, loading };
 };

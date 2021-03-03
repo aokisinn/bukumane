@@ -7,10 +7,11 @@ import NavBar from "../components/NavBar";
 import Grid from "@material-ui/core/Grid";
 import Fab from "@material-ui/core/Fab";
 import AddIcon from "@material-ui/icons/Add";
+import Button from "@material-ui/core/Button";
 
 const Home = (props: any) => {
-    const { authUser, setCurrentUser } = useAuth();
-    const { getBookList, bookList } = useBookList();
+    const { setCurrentUser } = useAuth();
+    const { getBookList, bookList, isLastPage } = useBookList();
 
     useEffect(() => {
         setCurrentUser().then(currentUser => {
@@ -28,11 +29,30 @@ const Home = (props: any) => {
                 <Grid container spacing={1}>
                     {bookList?.map(function(book) {
                         return (
-                            <Grid item xs={12} md={3} lg={3} xl={2}>
+                            <Grid
+                                item
+                                xs={12}
+                                md={3}
+                                lg={3}
+                                xl={2}
+                                key={book.id}
+                            >
                                 <BookCard book={book} />
                             </Grid>
                         );
                     })}
+                    {isLastPage ? null : (
+                        <Button
+                            color="primary"
+                            variant="contained"
+                            fullWidth
+                            onClick={() => {
+                                getBookList();
+                            }}
+                        >
+                            取得
+                        </Button>
+                    )}
                 </Grid>
             </RightMotion>
             <div
