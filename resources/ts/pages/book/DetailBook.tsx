@@ -48,10 +48,8 @@ const useStyles = makeStyles({
     }
 });
 
-const paperStyle = {};
-
 const DetailBook = (props: any) => {
-    const { authUser, setCurrentUser } = useAuth();
+    const { setCurrentUser } = useAuth();
     const { findBook, book, loading } = useFindBook();
     const classes = useStyles();
     const bookId = props.match.params.id;
