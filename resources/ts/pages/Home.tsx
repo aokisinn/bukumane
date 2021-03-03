@@ -41,7 +41,7 @@ const Home = (props: any) => {
                             </Grid>
                         );
                     })}
-                    {isLastPage ? null : (
+                    {isLastPage && bookList ? null : (
                         <Button
                             color="primary"
                             variant="contained"
