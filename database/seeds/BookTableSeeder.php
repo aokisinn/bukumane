@@ -30,8 +30,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3080",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-02-28T09:49:12.000000Z",
-                "updated_at" => "2021-02-28T09:49:12.000000Z",
+                "created_at" => "2021-02-28T09:49:12",
+                "updated_at" => "2021-02-28T09:49:12",
             ],
             [
                 "title" => "Bootstrap4フロントエンド開発の教科書",
@@ -47,8 +47,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3608",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T01:38:10.000000Z",
-                "updated_at" => "2021-03-01T01:38:10.000000Z"
+                "created_at" => "2021-03-01T01:38:10",
+                "updated_at" => "2021-03-01T01:38:10"
             ],
             [
                 "title" => "上　薬剤師業務の基本［知識・態度］第3版",
@@ -64,8 +64,8 @@ class BookTableSeeder extends Seeder
                 "price" => "4180",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T01:40:48.000000Z",
-                "updated_at" => "2021-03-01T01:40:48.000000Z"
+                "created_at" => "2021-03-01T01:40:48",
+                "updated_at" => "2021-03-01T01:40:48"
             ],
             [
                 "title" => "【POD】迷わない！困らない！レガシーフロントエンド安全改善ガイド",
@@ -81,8 +81,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2420",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T01:41:03.000000Z",
-                "updated_at" => "2021-03-01T01:41:03.000000Z"
+                "created_at" => "2021-03-01T01:41:03",
+                "updated_at" => "2021-03-01T01:41:03"
             ],
             [
                 "title" => "ダイアグラム別UML徹底活用第2版",
@@ -98,8 +98,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2838",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T01:41:15.000000Z",
-                "updated_at" => "2021-03-01T01:41:15.000000Z"
+                "created_at" => "2021-03-01T01:41:15",
+                "updated_at" => "2021-03-01T01:41:15"
             ],
             [
                 "title" => "Web APIの設計",
@@ -115,8 +115,8 @@ class BookTableSeeder extends Seeder
                 "price" => "4180",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T01:41:37.000000Z",
-                "updated_at" => "2021-03-01T01:41:37.000000Z"
+                "created_at" => "2021-03-01T01:41:37",
+                "updated_at" => "2021-03-01T01:41:37"
             ],
             [
                 "title" => "Atomic　Design",
@@ -132,8 +132,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3278",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T01:41:48.000000Z",
-                "updated_at" => "2021-03-01T01:41:48.000000Z"
+                "created_at" => "2021-03-01T01:41:48",
+                "updated_at" => "2021-03-01T01:41:48"
             ],
             [
                 "title" => "JavaScript Primer 迷わないための入門書",
@@ -149,8 +149,8 @@ class BookTableSeeder extends Seeder
                 "price" => "4180",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T01:41:59.000000Z",
-                "updated_at" => "2021-03-01T01:41:59.000000Z"
+                "created_at" => "2021-03-01T01:41:59",
+                "updated_at" => "2021-03-01T01:41:59"
             ],
             [
                 "title" => "Webサイト高速化のための　静的サイトジェネレーター活用入門",
@@ -166,8 +166,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3498",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T01:42:12.000000Z",
-                "updated_at" => "2021-03-01T01:42:12.000000Z"
+                "created_at" => "2021-03-01T01:42:12",
+                "updated_at" => "2021-03-01T01:42:12"
             ],
             [
                 "title" => "ポートとソケットがわかればインターネットがわかる",
@@ -183,8 +183,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2508",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T01:43:02.000000Z",
-                "updated_at" => "2021-03-01T01:43:02.000000Z"
+                "created_at" => "2021-03-01T01:43:02",
+                "updated_at" => "2021-03-01T01:43:02"
             ],
             [
                 "title" => "Clean Agile 基本に立ち戻れ",
@@ -200,8 +200,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2640",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:22:03.000000Z",
-                "updated_at" => "2021-03-01T05:22:03.000000Z"
+                "created_at" => "2021-03-01T05:22:03",
+                "updated_at" => "2021-03-01T05:22:03"
             ],
             [
                 "title" => "Reactビギナーズガイド",
@@ -217,8 +217,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2750",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T01:43:13.000000Z",
-                "updated_at" => "2021-03-01T01:43:13.000000Z"
+                "created_at" => "2021-03-01T01:43:13",
+                "updated_at" => "2021-03-01T01:43:13"
             ],
             [
                 "title" => "図解即戦力　ネットワーク構築&運用がこれ1冊でしっかりわかる教科書",
@@ -234,8 +234,8 @@ class BookTableSeeder extends Seeder
                 "price" => "1958",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T01:49:37.000000Z",
-                "updated_at" => "2021-03-01T01:49:37.000000Z"
+                "created_at" => "2021-03-01T01:49:37",
+                "updated_at" => "2021-03-01T01:49:37"
             ],
             [
                 "title" => "個人開発のための Webサービス公開マニュアル",
@@ -251,8 +251,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3300",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T01:50:02.000000Z",
-                "updated_at" => "2021-03-01T01:50:02.000000Z"
+                "created_at" => "2021-03-01T01:50:02",
+                "updated_at" => "2021-03-01T01:50:02"
             ],
             [
                 "title" => "失敗から学ぶRDBの正しい歩き方",
@@ -268,8 +268,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3014",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T01:57:45.000000Z",
-                "updated_at" => "2021-03-01T01:57:45.000000Z"
+                "created_at" => "2021-03-01T01:57:45",
+                "updated_at" => "2021-03-01T01:57:45"
             ],
             [
                 "title" => "達人に学ぶDB設計徹底指南書",
@@ -285,8 +285,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2860",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T01:57:56.000000Z",
-                "updated_at" => "2021-03-01T01:57:56.000000Z"
+                "created_at" => "2021-03-01T01:57:56",
+                "updated_at" => "2021-03-01T01:57:56"
             ],
             [
                 "title" => "誰も教えてくれなかった実践薬歴",
@@ -302,8 +302,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3300",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T01:58:06.000000Z",
-                "updated_at" => "2021-03-01T01:58:06.000000Z"
+                "created_at" => "2021-03-01T01:58:06",
+                "updated_at" => "2021-03-01T01:58:06"
             ],
             [
                 "title" => "Effective Java",
@@ -319,8 +319,8 @@ class BookTableSeeder extends Seeder
                 "price" => "4400",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T01:58:20.000000Z",
-                "updated_at" => "2021-03-01T01:58:20.000000Z"
+                "created_at" => "2021-03-01T01:58:20",
+                "updated_at" => "2021-03-01T01:58:20"
             ],
             [
                 "title" => "ハッカーと画家",
@@ -336,8 +336,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2640",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T02:02:11.000000Z",
-                "updated_at" => "2021-03-01T02:02:11.000000Z"
+                "created_at" => "2021-03-01T02:02:11",
+                "updated_at" => "2021-03-01T02:02:11"
             ],
             [
                 "title" => "24時間365日サーバ／インフラを支える技術",
@@ -353,8 +353,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3058",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T02:13:34.000000Z",
-                "updated_at" => "2021-03-01T02:13:34.000000Z"
+                "created_at" => "2021-03-01T02:13:34",
+                "updated_at" => "2021-03-01T02:13:34"
             ],
             [
                 "title" => "エクストリームプログラミング",
@@ -370,8 +370,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2420",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:25:18.000000Z",
-                "updated_at" => "2021-03-01T05:25:18.000000Z"
+                "created_at" => "2021-03-01T05:25:18",
+                "updated_at" => "2021-03-01T05:25:18"
             ],
             [
                 "title" => "リーダブルコード",
@@ -387,8 +387,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2640",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T02:14:23.000000Z",
-                "updated_at" => "2021-03-01T02:14:23.000000Z"
+                "created_at" => "2021-03-01T02:14:23",
+                "updated_at" => "2021-03-01T02:14:23"
             ],
             [
                 "title" => "詳説正規表現第3版",
@@ -404,8 +404,8 @@ class BookTableSeeder extends Seeder
                 "price" => "5280",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T02:14:36.000000Z",
-                "updated_at" => "2021-03-01T02:14:36.000000Z"
+                "created_at" => "2021-03-01T02:14:36",
+                "updated_at" => "2021-03-01T02:14:36"
             ],
             [
                 "title" => "CentOS 8で作るネットワークサーバ構築ガイド",
@@ -421,8 +421,8 @@ class BookTableSeeder extends Seeder
                 "price" => "4950",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T02:14:46.000000Z",
-                "updated_at" => "2021-03-01T02:14:46.000000Z"
+                "created_at" => "2021-03-01T02:14:46",
+                "updated_at" => "2021-03-01T02:14:46"
             ],
             [
                 "title" => "基礎からのプログラミングリテラシー",
@@ -438,8 +438,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2068",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:13:43.000000Z",
-                "updated_at" => "2021-03-01T05:13:43.000000Z"
+                "created_at" => "2021-03-01T05:13:43",
+                "updated_at" => "2021-03-01T05:13:43"
             ],
             [
                 "title" => "HTML＆CSSの基礎知識",
@@ -455,8 +455,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2178",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:13:57.000000Z",
-                "updated_at" => "2021-03-01T05:13:57.000000Z"
+                "created_at" => "2021-03-01T05:13:57",
+                "updated_at" => "2021-03-01T05:13:57"
             ],
             [
                 "title" => "イラスト図解式 この一冊で全部わかるWeb技術の基本",
@@ -472,8 +472,8 @@ class BookTableSeeder extends Seeder
                 "price" => "1848",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:14:13.000000Z",
-                "updated_at" => "2021-03-01T05:14:13.000000Z"
+                "created_at" => "2021-03-01T05:14:13",
+                "updated_at" => "2021-03-01T05:14:13"
             ],
             [
                 "title" => "Webを支える技術",
@@ -489,8 +489,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2827",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:14:27.000000Z",
-                "updated_at" => "2021-03-01T05:14:27.000000Z"
+                "created_at" => "2021-03-01T05:14:27",
+                "updated_at" => "2021-03-01T05:14:27"
             ],
             [
                 "title" => "セキュリティのためのログ分析入門",
@@ -506,8 +506,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3058",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:14:37.000000Z",
-                "updated_at" => "2021-03-01T05:14:37.000000Z"
+                "created_at" => "2021-03-01T05:14:37",
+                "updated_at" => "2021-03-01T05:14:37"
             ],
             [
                 "title" => "プログラミング言語Go",
@@ -523,8 +523,8 @@ class BookTableSeeder extends Seeder
                 "price" => "4180",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:36:55.000000Z",
-                "updated_at" => "2021-03-01T05:36:55.000000Z"
+                "created_at" => "2021-03-01T05:36:55",
+                "updated_at" => "2021-03-01T05:36:55"
             ],
             [
                 "title" => "エンジニアのためのGitの教科書 実践で使える！バージョン管理とチーム開発手法",
@@ -540,8 +540,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2420",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:14:45.000000Z",
-                "updated_at" => "2021-03-01T05:14:45.000000Z"
+                "created_at" => "2021-03-01T05:14:45",
+                "updated_at" => "2021-03-01T05:14:45"
             ],
             [
                 "title" => "おうちで学べるデータベースのきほん",
@@ -557,8 +557,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2420",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:16:16.000000Z",
-                "updated_at" => "2021-03-01T05:16:16.000000Z"
+                "created_at" => "2021-03-01T05:16:16",
+                "updated_at" => "2021-03-01T05:16:16"
             ],
             [
                 "title" => "体系的に学ぶ 安全なWebアプリケーションの作り方 第2版",
@@ -574,8 +574,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3520",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:16:25.000000Z",
-                "updated_at" => "2021-03-01T05:16:25.000000Z"
+                "created_at" => "2021-03-01T05:16:25",
+                "updated_at" => "2021-03-01T05:16:25"
             ],
             [
                 "title" => "Amazon Web Services実践入門",
@@ -591,8 +591,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2838",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:17:01.000000Z",
-                "updated_at" => "2021-03-01T05:17:01.000000Z"
+                "created_at" => "2021-03-01T05:17:01",
+                "updated_at" => "2021-03-01T05:17:01"
             ],
             [
 
@@ -609,8 +609,8 @@ class BookTableSeeder extends Seeder
                 "price" => "1760",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:17:09.000000Z",
-                "updated_at" => "2021-03-01T05:17:09.000000Z"
+                "created_at" => "2021-03-01T05:17:09",
+                "updated_at" => "2021-03-01T05:17:09"
             ],
             [
 
@@ -627,8 +627,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2640",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:17:18.000000Z",
-                "updated_at" => "2021-03-01T05:17:18.000000Z"
+                "created_at" => "2021-03-01T05:17:18",
+                "updated_at" => "2021-03-01T05:17:18"
             ],
             [
 
@@ -645,8 +645,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3740",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:17:29.000000Z",
-                "updated_at" => "2021-03-01T05:17:29.000000Z"
+                "created_at" => "2021-03-01T05:17:29",
+                "updated_at" => "2021-03-01T05:17:29"
             ],
             [
 
@@ -663,8 +663,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2640",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:17:40.000000Z",
-                "updated_at" => "2021-03-01T05:17:40.000000Z"
+                "created_at" => "2021-03-01T05:17:40",
+                "updated_at" => "2021-03-01T05:17:40"
             ],
             [
 
@@ -681,8 +681,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3960",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:39:19.000000Z",
-                "updated_at" => "2021-03-01T05:39:19.000000Z"
+                "created_at" => "2021-03-01T05:39:19",
+                "updated_at" => "2021-03-01T05:39:19"
             ],
             [
 
@@ -699,8 +699,8 @@ class BookTableSeeder extends Seeder
                 "price" => "4378",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:17:51.000000Z",
-                "updated_at" => "2021-03-01T05:17:51.000000Z"
+                "created_at" => "2021-03-01T05:17:51",
+                "updated_at" => "2021-03-01T05:17:51"
             ],
             [
 
@@ -717,8 +717,8 @@ class BookTableSeeder extends Seeder
                 "price" => "6710",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:19:58.000000Z",
-                "updated_at" => "2021-03-01T05:19:58.000000Z"
+                "created_at" => "2021-03-01T05:19:58",
+                "updated_at" => "2021-03-01T05:19:58"
             ],
             [
 
@@ -735,8 +735,8 @@ class BookTableSeeder extends Seeder
                 "price" => "4620",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:20:42.000000Z",
-                "updated_at" => "2021-03-01T05:20:42.000000Z"
+                "created_at" => "2021-03-01T05:20:42",
+                "updated_at" => "2021-03-01T05:20:42"
             ],
             [
 
@@ -753,8 +753,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3080",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:20:52.000000Z",
-                "updated_at" => "2021-03-01T05:20:52.000000Z"
+                "created_at" => "2021-03-01T05:20:52",
+                "updated_at" => "2021-03-01T05:20:52"
             ],
             [
 
@@ -771,8 +771,8 @@ class BookTableSeeder extends Seeder
                 "price" => "6380",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:21:02.000000Z",
-                "updated_at" => "2021-03-01T05:21:02.000000Z"
+                "created_at" => "2021-03-01T05:21:02",
+                "updated_at" => "2021-03-01T05:21:02"
             ],
             [
 
@@ -789,8 +789,8 @@ class BookTableSeeder extends Seeder
                 "price" => "5060",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:21:14.000000Z",
-                "updated_at" => "2021-03-01T05:21:14.000000Z"
+                "created_at" => "2021-03-01T05:21:14",
+                "updated_at" => "2021-03-01T05:21:14"
             ],
             [
 
@@ -807,8 +807,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3718",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:21:26.000000Z",
-                "updated_at" => "2021-03-01T05:21:26.000000Z"
+                "created_at" => "2021-03-01T05:21:26",
+                "updated_at" => "2021-03-01T05:21:26"
             ],
             [
 
@@ -825,8 +825,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3960",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:21:44.000000Z",
-                "updated_at" => "2021-03-01T05:21:44.000000Z"
+                "created_at" => "2021-03-01T05:21:44",
+                "updated_at" => "2021-03-01T05:21:44"
             ],
             [
 
@@ -843,8 +843,8 @@ class BookTableSeeder extends Seeder
                 "price" => "4180",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:21:53.000000Z",
-                "updated_at" => "2021-03-01T05:21:53.000000Z"
+                "created_at" => "2021-03-01T05:21:53",
+                "updated_at" => "2021-03-01T05:21:53"
             ],
             [
 
@@ -861,8 +861,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2640",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:25:30.000000Z",
-                "updated_at" => "2021-03-01T05:25:30.000000Z"
+                "created_at" => "2021-03-01T05:25:30",
+                "updated_at" => "2021-03-01T05:25:30"
             ],
             [
 
@@ -879,8 +879,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2530",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:25:41.000000Z",
-                "updated_at" => "2021-03-01T05:25:41.000000Z"
+                "created_at" => "2021-03-01T05:25:41",
+                "updated_at" => "2021-03-01T05:25:41"
             ],
             [
 
@@ -897,8 +897,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3080",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:25:53.000000Z",
-                "updated_at" => "2021-03-01T05:25:53.000000Z"
+                "created_at" => "2021-03-01T05:25:53",
+                "updated_at" => "2021-03-01T05:25:53"
             ],
             [
 
@@ -915,8 +915,8 @@ class BookTableSeeder extends Seeder
                 "price" => "1540",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:26:31.000000Z",
-                "updated_at" => "2021-03-01T05:26:31.000000Z"
+                "created_at" => "2021-03-01T05:26:31",
+                "updated_at" => "2021-03-01T05:26:31"
             ],
             [
 
@@ -933,8 +933,8 @@ class BookTableSeeder extends Seeder
                 "price" => "1980",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:26:42.000000Z",
-                "updated_at" => "2021-03-01T05:26:42.000000Z"
+                "created_at" => "2021-03-01T05:26:42",
+                "updated_at" => "2021-03-01T05:26:42"
             ],
             [
 
@@ -951,8 +951,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2420",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:26:57.000000Z",
-                "updated_at" => "2021-03-01T05:26:57.000000Z"
+                "created_at" => "2021-03-01T05:26:57",
+                "updated_at" => "2021-03-01T05:26:57"
             ],
             [
 
@@ -969,8 +969,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2860",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:27:04.000000Z",
-                "updated_at" => "2021-03-01T05:27:04.000000Z"
+                "created_at" => "2021-03-01T05:27:04",
+                "updated_at" => "2021-03-01T05:27:04"
             ],
             [
 
@@ -987,8 +987,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3520",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:27:14.000000Z",
-                "updated_at" => "2021-03-01T05:27:14.000000Z"
+                "created_at" => "2021-03-01T05:27:14",
+                "updated_at" => "2021-03-01T05:27:14"
             ],
             [
                 "title" => "ドメイン駆動設計入門 ボトムアップでわかる！ドメイン駆動設計の基本",
@@ -1004,8 +1004,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3520",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T10:38:12.000000Z",
-                "updated_at" => "2021-03-01T10:38:12.000000Z"
+                "created_at" => "2021-03-01T10:38:12",
+                "updated_at" => "2021-03-01T10:38:12"
             ],
             [
 
@@ -1022,8 +1022,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2420",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:27:24.000000Z",
-                "updated_at" => "2021-03-01T05:27:24.000000Z"
+                "created_at" => "2021-03-01T05:27:24",
+                "updated_at" => "2021-03-01T05:27:24"
             ],
             [
 
@@ -1040,8 +1040,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2420",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:27:38.000000Z",
-                "updated_at" => "2021-03-01T05:27:38.000000Z"
+                "created_at" => "2021-03-01T05:27:38",
+                "updated_at" => "2021-03-01T05:27:38"
             ],
             [
 
@@ -1058,8 +1058,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2640",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:28:38.000000Z",
-                "updated_at" => "2021-03-01T05:28:38.000000Z"
+                "created_at" => "2021-03-01T05:28:38",
+                "updated_at" => "2021-03-01T05:28:38"
             ],
             [
 
@@ -1076,8 +1076,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2860",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:28:44.000000Z",
-                "updated_at" => "2021-03-01T05:28:44.000000Z"
+                "created_at" => "2021-03-01T05:28:44",
+                "updated_at" => "2021-03-01T05:28:44"
             ],
             [
 
@@ -1094,8 +1094,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3520",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:29:11.000000Z",
-                "updated_at" => "2021-03-01T05:29:11.000000Z"
+                "created_at" => "2021-03-01T05:29:11",
+                "updated_at" => "2021-03-01T05:29:11"
             ],
             [
 
@@ -1112,8 +1112,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2420",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:29:23.000000Z",
-                "updated_at" => "2021-03-01T05:29:23.000000Z"
+                "created_at" => "2021-03-01T05:29:23",
+                "updated_at" => "2021-03-01T05:29:23"
             ],
             [
 
@@ -1130,8 +1130,8 @@ class BookTableSeeder extends Seeder
                 "price" => "4290",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:29:58.000000Z",
-                "updated_at" => "2021-03-01T05:29:58.000000Z"
+                "created_at" => "2021-03-01T05:29:58",
+                "updated_at" => "2021-03-01T05:29:58"
             ],
             [
 
@@ -1148,8 +1148,8 @@ class BookTableSeeder extends Seeder
                 "price" => "1760",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:30:34.000000Z",
-                "updated_at" => "2021-03-01T05:30:34.000000Z"
+                "created_at" => "2021-03-01T05:30:34",
+                "updated_at" => "2021-03-01T05:30:34"
             ],
             [
 
@@ -1166,8 +1166,8 @@ class BookTableSeeder extends Seeder
                 "price" => "1815",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:30:44.000000Z",
-                "updated_at" => "2021-03-01T05:30:44.000000Z"
+                "created_at" => "2021-03-01T05:30:44",
+                "updated_at" => "2021-03-01T05:30:44"
             ],
             [
 
@@ -1184,8 +1184,8 @@ class BookTableSeeder extends Seeder
                 "price" => "1760",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:30:55.000000Z",
-                "updated_at" => "2021-03-01T05:30:55.000000Z"
+                "created_at" => "2021-03-01T05:30:55",
+                "updated_at" => "2021-03-01T05:30:55"
             ],
             [
 
@@ -1202,8 +1202,8 @@ class BookTableSeeder extends Seeder
                 "price" => "1760",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:31:05.000000Z",
-                "updated_at" => "2021-03-01T05:31:05.000000Z"
+                "created_at" => "2021-03-01T05:31:05",
+                "updated_at" => "2021-03-01T05:31:05"
             ],
             [
 
@@ -1220,8 +1220,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2200",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:31:14.000000Z",
-                "updated_at" => "2021-03-01T05:31:14.000000Z"
+                "created_at" => "2021-03-01T05:31:14",
+                "updated_at" => "2021-03-01T05:31:14"
             ],
             [
 
@@ -1238,8 +1238,8 @@ class BookTableSeeder extends Seeder
                 "price" => "1980",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:31:41.000000Z",
-                "updated_at" => "2021-03-01T05:31:41.000000Z"
+                "created_at" => "2021-03-01T05:31:41",
+                "updated_at" => "2021-03-01T05:31:41"
             ],
             [
 
@@ -1256,8 +1256,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3300",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:32:26.000000Z",
-                "updated_at" => "2021-03-01T05:32:26.000000Z"
+                "created_at" => "2021-03-01T05:32:26",
+                "updated_at" => "2021-03-01T05:32:26"
             ],
             [
 
@@ -1274,8 +1274,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3300",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:32:46.000000Z",
-                "updated_at" => "2021-03-01T05:32:46.000000Z"
+                "created_at" => "2021-03-01T05:32:46",
+                "updated_at" => "2021-03-01T05:32:46"
             ],
             [
 
@@ -1292,8 +1292,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2420",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:33:35.000000Z",
-                "updated_at" => "2021-03-01T05:33:35.000000Z"
+                "created_at" => "2021-03-01T05:33:35",
+                "updated_at" => "2021-03-01T05:33:35"
             ],
             [
 
@@ -1310,8 +1310,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3740",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:34:17.000000Z",
-                "updated_at" => "2021-03-01T05:34:17.000000Z"
+                "created_at" => "2021-03-01T05:34:17",
+                "updated_at" => "2021-03-01T05:34:17"
             ],
             [
 
@@ -1328,8 +1328,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3520",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:39:26.000000Z",
-                "updated_at" => "2021-03-01T05:39:26.000000Z"
+                "created_at" => "2021-03-01T05:39:26",
+                "updated_at" => "2021-03-01T05:39:26"
             ],
             [
 
@@ -1346,8 +1346,8 @@ class BookTableSeeder extends Seeder
                 "price" => "4620",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:34:33.000000Z",
-                "updated_at" => "2021-03-01T05:34:33.000000Z"
+                "created_at" => "2021-03-01T05:34:33",
+                "updated_at" => "2021-03-01T05:34:33"
             ],
             [
 
@@ -1364,8 +1364,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3740",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:34:48.000000Z",
-                "updated_at" => "2021-03-01T05:34:48.000000Z"
+                "created_at" => "2021-03-01T05:34:48",
+                "updated_at" => "2021-03-01T05:34:48"
             ],
             [
 
@@ -1382,8 +1382,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3740",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:35:27.000000Z",
-                "updated_at" => "2021-03-01T05:35:27.000000Z"
+                "created_at" => "2021-03-01T05:35:27",
+                "updated_at" => "2021-03-01T05:35:27"
             ],
             [
 
@@ -1400,8 +1400,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3080",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:35:41.000000Z",
-                "updated_at" => "2021-03-01T05:35:41.000000Z"
+                "created_at" => "2021-03-01T05:35:41",
+                "updated_at" => "2021-03-01T05:35:41"
             ],
             [
 
@@ -1418,8 +1418,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3608",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:35:52.000000Z",
-                "updated_at" => "2021-03-01T05:35:52.000000Z"
+                "created_at" => "2021-03-01T05:35:52",
+                "updated_at" => "2021-03-01T05:35:52"
             ],
             [
 
@@ -1436,8 +1436,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3509",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:36:02.000000Z",
-                "updated_at" => "2021-03-01T05:36:02.000000Z"
+                "created_at" => "2021-03-01T05:36:02",
+                "updated_at" => "2021-03-01T05:36:02"
             ],
             [
 
@@ -1454,8 +1454,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3608",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:36:44.000000Z",
-                "updated_at" => "2021-03-01T05:36:44.000000Z"
+                "created_at" => "2021-03-01T05:36:44",
+                "updated_at" => "2021-03-01T05:36:44"
             ],
             [
 
@@ -1472,8 +1472,8 @@ class BookTableSeeder extends Seeder
                 "price" => "4378",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:37:08.000000Z",
-                "updated_at" => "2021-03-01T05:37:08.000000Z"
+                "created_at" => "2021-03-01T05:37:08",
+                "updated_at" => "2021-03-01T05:37:08"
             ],
             [
 
@@ -1490,8 +1490,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3740",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:37:20.000000Z",
-                "updated_at" => "2021-03-01T05:37:20.000000Z"
+                "created_at" => "2021-03-01T05:37:20",
+                "updated_at" => "2021-03-01T05:37:20"
             ],
             [
                 "title" => "シス管系女子",
@@ -1507,8 +1507,8 @@ class BookTableSeeder extends Seeder
                 "price" => "1760",
                 "size" => "ムックその他",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:37:55.000000Z",
-                "updated_at" => "2021-03-01T05:37:55.000000Z"
+                "created_at" => "2021-03-01T05:37:55",
+                "updated_at" => "2021-03-01T05:37:55"
             ],
             [
 
@@ -1525,8 +1525,8 @@ class BookTableSeeder extends Seeder
                 "price" => "1760",
                 "size" => "ムックその他",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:38:05.000000Z",
-                "updated_at" => "2021-03-01T05:38:05.000000Z"
+                "created_at" => "2021-03-01T05:38:05",
+                "updated_at" => "2021-03-01T05:38:05"
             ],
             [
 
@@ -1543,8 +1543,8 @@ class BookTableSeeder extends Seeder
                 "price" => "1760",
                 "size" => "ムックその他",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:38:15.000000Z",
-                "updated_at" => "2021-03-01T05:38:15.000000Z"
+                "created_at" => "2021-03-01T05:38:15",
+                "updated_at" => "2021-03-01T05:38:15"
             ],
             [
 
@@ -1561,8 +1561,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3278",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:38:25.000000Z",
-                "updated_at" => "2021-03-01T05:38:25.000000Z"
+                "created_at" => "2021-03-01T05:38:25",
+                "updated_at" => "2021-03-01T05:38:25"
             ],
             [
 
@@ -1579,8 +1579,8 @@ class BookTableSeeder extends Seeder
                 "price" => "4048",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:38:36.000000Z",
-                "updated_at" => "2021-03-01T05:38:36.000000Z"
+                "created_at" => "2021-03-01T05:38:36",
+                "updated_at" => "2021-03-01T05:38:36"
             ],
             [
 
@@ -1597,8 +1597,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2838",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:38:46.000000Z",
-                "updated_at" => "2021-03-01T05:38:46.000000Z"
+                "created_at" => "2021-03-01T05:38:46",
+                "updated_at" => "2021-03-01T05:38:46"
             ],
             [
 
@@ -1615,8 +1615,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3740",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:38:59.000000Z",
-                "updated_at" => "2021-03-01T05:38:59.000000Z"
+                "created_at" => "2021-03-01T05:38:59",
+                "updated_at" => "2021-03-01T05:38:59"
             ],
             [
 
@@ -1633,8 +1633,8 @@ class BookTableSeeder extends Seeder
                 "price" => "4180",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:39:06.000000Z",
-                "updated_at" => "2021-03-01T05:39:06.000000Z"
+                "created_at" => "2021-03-01T05:39:06",
+                "updated_at" => "2021-03-01T05:39:06"
             ],
             [
 
@@ -1651,8 +1651,8 @@ class BookTableSeeder extends Seeder
                 "price" => "4180",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:39:52.000000Z",
-                "updated_at" => "2021-03-01T05:39:52.000000Z"
+                "created_at" => "2021-03-01T05:39:52",
+                "updated_at" => "2021-03-01T05:39:52"
             ],
             [
 
@@ -1669,8 +1669,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3960",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:40:02.000000Z",
-                "updated_at" => "2021-03-01T05:40:02.000000Z"
+                "created_at" => "2021-03-01T05:40:02",
+                "updated_at" => "2021-03-01T05:40:02"
             ],
             [
 
@@ -1687,8 +1687,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3520",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:40:11.000000Z",
-                "updated_at" => "2021-03-01T05:40:11.000000Z"
+                "created_at" => "2021-03-01T05:40:11",
+                "updated_at" => "2021-03-01T05:40:11"
             ],
             [
 
@@ -1705,8 +1705,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2838",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:40:23.000000Z",
-                "updated_at" => "2021-03-01T05:40:23.000000Z"
+                "created_at" => "2021-03-01T05:40:23",
+                "updated_at" => "2021-03-01T05:40:23"
             ],
             [
 
@@ -1723,8 +1723,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2750",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:40:35.000000Z",
-                "updated_at" => "2021-03-01T05:40:35.000000Z"
+                "created_at" => "2021-03-01T05:40:35",
+                "updated_at" => "2021-03-01T05:40:35"
             ],
             [
 
@@ -1741,8 +1741,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3960",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:40:44.000000Z",
-                "updated_at" => "2021-03-01T05:40:44.000000Z"
+                "created_at" => "2021-03-01T05:40:44",
+                "updated_at" => "2021-03-01T05:40:44"
             ],
             [
 
@@ -1759,8 +1759,8 @@ class BookTableSeeder extends Seeder
                 "price" => "4620",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:45:26.000000Z",
-                "updated_at" => "2021-03-01T05:45:26.000000Z"
+                "created_at" => "2021-03-01T05:45:26",
+                "updated_at" => "2021-03-01T05:45:26"
             ],
             [
 
@@ -1777,8 +1777,8 @@ class BookTableSeeder extends Seeder
                 "price" => "4730",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:41:30.000000Z",
-                "updated_at" => "2021-03-01T05:41:30.000000Z"
+                "created_at" => "2021-03-01T05:41:30",
+                "updated_at" => "2021-03-01T05:41:30"
             ],
             [
 
@@ -1795,8 +1795,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2640",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:41:45.000000Z",
-                "updated_at" => "2021-03-01T05:41:45.000000Z"
+                "created_at" => "2021-03-01T05:41:45",
+                "updated_at" => "2021-03-01T05:41:45"
             ],
             [
 
@@ -1813,8 +1813,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2200",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:41:54.000000Z",
-                "updated_at" => "2021-03-01T05:41:54.000000Z"
+                "created_at" => "2021-03-01T05:41:54",
+                "updated_at" => "2021-03-01T05:41:54"
             ],
             [
 
@@ -1831,8 +1831,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3080",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:42:04.000000Z",
-                "updated_at" => "2021-03-01T05:42:04.000000Z"
+                "created_at" => "2021-03-01T05:42:04",
+                "updated_at" => "2021-03-01T05:42:04"
             ],
             [
 
@@ -1849,8 +1849,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3080",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:42:16.000000Z",
-                "updated_at" => "2021-03-01T05:42:16.000000Z"
+                "created_at" => "2021-03-01T05:42:16",
+                "updated_at" => "2021-03-01T05:42:16"
             ],
             [
 
@@ -1867,8 +1867,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2640",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:42:22.000000Z",
-                "updated_at" => "2021-03-01T05:42:22.000000Z"
+                "created_at" => "2021-03-01T05:42:22",
+                "updated_at" => "2021-03-01T05:42:22"
             ],
             [
 
@@ -1885,8 +1885,8 @@ class BookTableSeeder extends Seeder
                 "price" => "4180",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:42:30.000000Z",
-                "updated_at" => "2021-03-01T05:42:30.000000Z"
+                "created_at" => "2021-03-01T05:42:30",
+                "updated_at" => "2021-03-01T05:42:30"
             ],
             [
 
@@ -1903,8 +1903,8 @@ class BookTableSeeder extends Seeder
                 "price" => "4620",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:42:38.000000Z",
-                "updated_at" => "2021-03-01T05:42:38.000000Z"
+                "created_at" => "2021-03-01T05:42:38",
+                "updated_at" => "2021-03-01T05:42:38"
             ],
             [
 
@@ -1921,8 +1921,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2508",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:42:48.000000Z",
-                "updated_at" => "2021-03-01T05:42:48.000000Z"
+                "created_at" => "2021-03-01T05:42:48",
+                "updated_at" => "2021-03-01T05:42:48"
             ],
             [
 
@@ -1939,8 +1939,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2750",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:42:59.000000Z",
-                "updated_at" => "2021-03-01T05:42:59.000000Z"
+                "created_at" => "2021-03-01T05:42:59",
+                "updated_at" => "2021-03-01T05:42:59"
             ],
             [
 
@@ -1957,8 +1957,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3608",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:43:14.000000Z",
-                "updated_at" => "2021-03-01T05:43:14.000000Z"
+                "created_at" => "2021-03-01T05:43:14",
+                "updated_at" => "2021-03-01T05:43:14"
             ],
             [
 
@@ -1975,8 +1975,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2618",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:43:23.000000Z",
-                "updated_at" => "2021-03-01T05:43:23.000000Z"
+                "created_at" => "2021-03-01T05:43:23",
+                "updated_at" => "2021-03-01T05:43:23"
             ],
             [
 
@@ -1993,8 +1993,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3938",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:43:32.000000Z",
-                "updated_at" => "2021-03-01T05:43:32.000000Z"
+                "created_at" => "2021-03-01T05:43:32",
+                "updated_at" => "2021-03-01T05:43:32"
             ],
             [
 
@@ -2011,8 +2011,8 @@ class BookTableSeeder extends Seeder
                 "price" => "5720",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:44:00.000000Z",
-                "updated_at" => "2021-03-01T05:44:00.000000Z"
+                "created_at" => "2021-03-01T05:44:00",
+                "updated_at" => "2021-03-01T05:44:00"
             ],
             [
 
@@ -2029,8 +2029,8 @@ class BookTableSeeder extends Seeder
                 "price" => "5720",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:44:06.000000Z",
-                "updated_at" => "2021-03-01T05:44:06.000000Z"
+                "created_at" => "2021-03-01T05:44:06",
+                "updated_at" => "2021-03-01T05:44:06"
             ],
             [
 
@@ -2047,8 +2047,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3278",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:44:16.000000Z",
-                "updated_at" => "2021-03-01T05:44:16.000000Z"
+                "created_at" => "2021-03-01T05:44:16",
+                "updated_at" => "2021-03-01T05:44:16"
             ],
             [
 
@@ -2065,8 +2065,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3080",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:44:27.000000Z",
-                "updated_at" => "2021-03-01T05:44:27.000000Z"
+                "created_at" => "2021-03-01T05:44:27",
+                "updated_at" => "2021-03-01T05:44:27"
             ],
             [
 
@@ -2083,8 +2083,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3520",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:44:32.000000Z",
-                "updated_at" => "2021-03-01T05:44:32.000000Z"
+                "created_at" => "2021-03-01T05:44:32",
+                "updated_at" => "2021-03-01T05:44:32"
             ],
             [
 
@@ -2101,8 +2101,8 @@ class BookTableSeeder extends Seeder
                 "price" => "4730",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:44:41.000000Z",
-                "updated_at" => "2021-03-01T05:44:41.000000Z"
+                "created_at" => "2021-03-01T05:44:41",
+                "updated_at" => "2021-03-01T05:44:41"
             ],
             [
 
@@ -2119,8 +2119,8 @@ class BookTableSeeder extends Seeder
                 "price" => "4180",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:44:50.000000Z",
-                "updated_at" => "2021-03-01T05:44:50.000000Z"
+                "created_at" => "2021-03-01T05:44:50",
+                "updated_at" => "2021-03-01T05:44:50"
             ],
             [
 
@@ -2137,8 +2137,8 @@ class BookTableSeeder extends Seeder
                 "price" => "4620",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T05:45:19.000000Z",
-                "updated_at" => "2021-03-01T05:45:19.000000Z"
+                "created_at" => "2021-03-01T05:45:19",
+                "updated_at" => "2021-03-01T05:45:19"
             ],
             [
 
@@ -2155,8 +2155,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3080",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T10:38:43.000000Z",
-                "updated_at" => "2021-03-01T10:38:43.000000Z"
+                "created_at" => "2021-03-01T10:38:43",
+                "updated_at" => "2021-03-01T10:38:43"
             ],
             [
 
@@ -2173,8 +2173,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3960",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T10:38:53.000000Z",
-                "updated_at" => "2021-03-01T10:38:53.000000Z"
+                "created_at" => "2021-03-01T10:38:53",
+                "updated_at" => "2021-03-01T10:38:53"
             ],
             [
 
@@ -2191,8 +2191,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3278",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T10:40:41.000000Z",
-                "updated_at" => "2021-03-01T10:40:41.000000Z"
+                "created_at" => "2021-03-01T10:40:41",
+                "updated_at" => "2021-03-01T10:40:41"
             ],
             [
 
@@ -2209,8 +2209,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3080",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T10:43:48.000000Z",
-                "updated_at" => "2021-03-01T10:43:48.000000Z"
+                "created_at" => "2021-03-01T10:43:48",
+                "updated_at" => "2021-03-01T10:43:48"
             ],
             [
 
@@ -2227,8 +2227,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2343",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T10:44:02.000000Z",
-                "updated_at" => "2021-03-01T10:44:02.000000Z"
+                "created_at" => "2021-03-01T10:44:02",
+                "updated_at" => "2021-03-01T10:44:02"
             ],
             [
 
@@ -2245,8 +2245,8 @@ class BookTableSeeder extends Seeder
                 "price" => "1980",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T10:44:13.000000Z",
-                "updated_at" => "2021-03-01T10:44:13.000000Z"
+                "created_at" => "2021-03-01T10:44:13",
+                "updated_at" => "2021-03-01T10:44:13"
             ],
             [
 
@@ -2263,8 +2263,8 @@ class BookTableSeeder extends Seeder
                 "price" => "1980",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T10:44:24.000000Z",
-                "updated_at" => "2021-03-01T10:44:24.000000Z"
+                "created_at" => "2021-03-01T10:44:24",
+                "updated_at" => "2021-03-01T10:44:24"
             ],
             [
 
@@ -2281,8 +2281,8 @@ class BookTableSeeder extends Seeder
                 "price" => "1430",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T10:57:59.000000Z",
-                "updated_at" => "2021-03-01T10:57:59.000000Z"
+                "created_at" => "2021-03-01T10:57:59",
+                "updated_at" => "2021-03-01T10:57:59"
             ],
             [
 
@@ -2299,8 +2299,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2618",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T10:44:39.000000Z",
-                "updated_at" => "2021-03-01T10:44:39.000000Z"
+                "created_at" => "2021-03-01T10:44:39",
+                "updated_at" => "2021-03-01T10:44:39"
             ],
             [
 
@@ -2317,8 +2317,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2640",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T10:45:20.000000Z",
-                "updated_at" => "2021-03-01T10:45:20.000000Z"
+                "created_at" => "2021-03-01T10:45:20",
+                "updated_at" => "2021-03-01T10:45:20"
             ],
             [
 
@@ -2335,8 +2335,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2640",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T10:45:29.000000Z",
-                "updated_at" => "2021-03-01T10:45:29.000000Z"
+                "created_at" => "2021-03-01T10:45:29",
+                "updated_at" => "2021-03-01T10:45:29"
             ],
             [
 
@@ -2353,8 +2353,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2640",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T10:45:41.000000Z",
-                "updated_at" => "2021-03-01T10:45:41.000000Z"
+                "created_at" => "2021-03-01T10:45:41",
+                "updated_at" => "2021-03-01T10:45:41"
             ],
             [
 
@@ -2371,8 +2371,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2640",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T10:45:53.000000Z",
-                "updated_at" => "2021-03-01T10:45:53.000000Z"
+                "created_at" => "2021-03-01T10:45:53",
+                "updated_at" => "2021-03-01T10:45:53"
             ],
             [
 
@@ -2389,8 +2389,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3234",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T10:46:04.000000Z",
-                "updated_at" => "2021-03-01T10:46:04.000000Z"
+                "created_at" => "2021-03-01T10:46:04",
+                "updated_at" => "2021-03-01T10:46:04"
             ],
             [
 
@@ -2407,8 +2407,8 @@ class BookTableSeeder extends Seeder
                 "price" => "1848",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T10:46:13.000000Z",
-                "updated_at" => "2021-03-01T10:46:13.000000Z"
+                "created_at" => "2021-03-01T10:46:13",
+                "updated_at" => "2021-03-01T10:46:13"
             ],
             [
 
@@ -2425,8 +2425,8 @@ class BookTableSeeder extends Seeder
                 "price" => "1980",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T10:46:37.000000Z",
-                "updated_at" => "2021-03-01T10:46:37.000000Z"
+                "created_at" => "2021-03-01T10:46:37",
+                "updated_at" => "2021-03-01T10:46:37"
             ],
             [
 
@@ -2443,8 +2443,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3300",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T10:59:21.000000Z",
-                "updated_at" => "2021-03-01T10:59:21.000000Z"
+                "created_at" => "2021-03-01T10:59:21",
+                "updated_at" => "2021-03-01T10:59:21"
             ],
             [
 
@@ -2461,8 +2461,8 @@ class BookTableSeeder extends Seeder
                 "price" => "5060",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T10:47:39.000000Z",
-                "updated_at" => "2021-03-01T10:47:39.000000Z"
+                "created_at" => "2021-03-01T10:47:39",
+                "updated_at" => "2021-03-01T10:47:39"
             ],
             [
 
@@ -2479,8 +2479,8 @@ class BookTableSeeder extends Seeder
                 "price" => "4620",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T10:48:18.000000Z",
-                "updated_at" => "2021-03-01T10:48:18.000000Z"
+                "created_at" => "2021-03-01T10:48:18",
+                "updated_at" => "2021-03-01T10:48:18"
             ],
             [
 
@@ -2497,8 +2497,8 @@ class BookTableSeeder extends Seeder
                 "price" => "1980",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T10:48:33.000000Z",
-                "updated_at" => "2021-03-01T10:48:33.000000Z"
+                "created_at" => "2021-03-01T10:48:33",
+                "updated_at" => "2021-03-01T10:48:33"
             ],
             [
 
@@ -2515,8 +2515,8 @@ class BookTableSeeder extends Seeder
                 "price" => "1650",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T10:48:48.000000Z",
-                "updated_at" => "2021-03-01T10:48:48.000000Z"
+                "created_at" => "2021-03-01T10:48:48",
+                "updated_at" => "2021-03-01T10:48:48"
             ],
             [
 
@@ -2533,8 +2533,8 @@ class BookTableSeeder extends Seeder
                 "price" => "902",
                 "size" => "新書",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T10:49:03.000000Z",
-                "updated_at" => "2021-03-01T10:49:03.000000Z"
+                "created_at" => "2021-03-01T10:49:03",
+                "updated_at" => "2021-03-01T10:49:03"
             ],
             [
 
@@ -2551,8 +2551,8 @@ class BookTableSeeder extends Seeder
                 "price" => "1650",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T10:49:32.000000Z",
-                "updated_at" => "2021-03-01T10:49:32.000000Z"
+                "created_at" => "2021-03-01T10:49:32",
+                "updated_at" => "2021-03-01T10:49:32"
             ],
             [
 
@@ -2569,8 +2569,8 @@ class BookTableSeeder extends Seeder
                 "price" => "1848",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T10:49:46.000000Z",
-                "updated_at" => "2021-03-01T10:49:46.000000Z"
+                "created_at" => "2021-03-01T10:49:46",
+                "updated_at" => "2021-03-01T10:49:46"
             ],
             [
 
@@ -2587,8 +2587,8 @@ class BookTableSeeder extends Seeder
                 "price" => "1320",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T10:49:58.000000Z",
-                "updated_at" => "2021-03-01T10:49:58.000000Z"
+                "created_at" => "2021-03-01T10:49:58",
+                "updated_at" => "2021-03-01T10:49:58"
             ],
             [
 
@@ -2605,8 +2605,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2200",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T10:50:56.000000Z",
-                "updated_at" => "2021-03-01T10:50:56.000000Z"
+                "created_at" => "2021-03-01T10:50:56",
+                "updated_at" => "2021-03-01T10:50:56"
             ],
             [
 
@@ -2623,8 +2623,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2728",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T10:51:08.000000Z",
-                "updated_at" => "2021-03-01T10:51:08.000000Z"
+                "created_at" => "2021-03-01T10:51:08",
+                "updated_at" => "2021-03-01T10:51:08"
             ],
             [
 
@@ -2641,8 +2641,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3278",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T10:51:21.000000Z",
-                "updated_at" => "2021-03-01T10:51:21.000000Z"
+                "created_at" => "2021-03-01T10:51:21",
+                "updated_at" => "2021-03-01T10:51:21"
             ],
             [
 
@@ -2659,8 +2659,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2640",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T10:51:37.000000Z",
-                "updated_at" => "2021-03-01T10:51:37.000000Z"
+                "created_at" => "2021-03-01T10:51:37",
+                "updated_at" => "2021-03-01T10:51:37"
             ],
             [
 
@@ -2677,8 +2677,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2838",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T10:51:52.000000Z",
-                "updated_at" => "2021-03-01T10:51:52.000000Z"
+                "created_at" => "2021-03-01T10:51:52",
+                "updated_at" => "2021-03-01T10:51:52"
             ],
             [
 
@@ -2695,8 +2695,8 @@ class BookTableSeeder extends Seeder
                 "price" => "1738",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T10:52:03.000000Z",
-                "updated_at" => "2021-03-01T10:52:03.000000Z"
+                "created_at" => "2021-03-01T10:52:03",
+                "updated_at" => "2021-03-01T10:52:03"
             ],
             [
 
@@ -2713,8 +2713,8 @@ class BookTableSeeder extends Seeder
                 "price" => "2398",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T10:56:04.000000Z",
-                "updated_at" => "2021-03-01T10:56:04.000000Z"
+                "created_at" => "2021-03-01T10:56:04",
+                "updated_at" => "2021-03-01T10:56:04"
             ],
             [
 
@@ -2731,8 +2731,8 @@ class BookTableSeeder extends Seeder
                 "price" => "1650",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T10:57:17.000000Z",
-                "updated_at" => "2021-03-01T10:57:17.000000Z"
+                "created_at" => "2021-03-01T10:57:17",
+                "updated_at" => "2021-03-01T10:57:17"
             ],
             [
 
@@ -2749,8 +2749,8 @@ class BookTableSeeder extends Seeder
                 "price" => "1650",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T10:57:30.000000Z",
-                "updated_at" => "2021-03-01T10:57:30.000000Z"
+                "created_at" => "2021-03-01T10:57:30",
+                "updated_at" => "2021-03-01T10:57:30"
             ],
             [
 
@@ -2767,8 +2767,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3113",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T10:59:30.000000Z",
-                "updated_at" => "2021-03-01T10:59:30.000000Z"
+                "created_at" => "2021-03-01T10:59:30",
+                "updated_at" => "2021-03-01T10:59:30"
             ],
             [
 
@@ -2785,8 +2785,8 @@ class BookTableSeeder extends Seeder
                 "price" => "3520",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T10:59:39.000000Z",
-                "updated_at" => "2021-03-01T10:59:39.000000Z"
+                "created_at" => "2021-03-01T10:59:39",
+                "updated_at" => "2021-03-01T10:59:39"
             ],
             [
 
@@ -2803,8 +2803,8 @@ class BookTableSeeder extends Seeder
                 "price" => "4070",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T10:59:47.000000Z",
-                "updated_at" => "2021-03-01T10:59:47.000000Z"
+                "created_at" => "2021-03-01T10:59:47",
+                "updated_at" => "2021-03-01T10:59:47"
             ],
             [
 
@@ -2821,8 +2821,8 @@ class BookTableSeeder extends Seeder
                 "price" => "5280",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T10:59:55.000000Z",
-                "updated_at" => "2021-03-01T10:59:55.000000Z"
+                "created_at" => "2021-03-01T10:59:55",
+                "updated_at" => "2021-03-01T10:59:55"
             ],
             [
 
@@ -2839,8 +2839,8 @@ class BookTableSeeder extends Seeder
                 "price" => "7260",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T11:00:09.000000Z",
-                "updated_at" => "2021-03-01T11:00:09.000000Z"
+                "created_at" => "2021-03-01T11:00:09",
+                "updated_at" => "2021-03-01T11:00:09"
             ],
             [
 
@@ -2857,8 +2857,8 @@ class BookTableSeeder extends Seeder
                 "price" => "9130",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T11:00:19.000000Z",
-                "updated_at" => "2021-03-01T11:00:19.000000Z"
+                "created_at" => "2021-03-01T11:00:19",
+                "updated_at" => "2021-03-01T11:00:19"
             ],
             [
 
@@ -2875,8 +2875,8 @@ class BookTableSeeder extends Seeder
                 "price" => "5940",
                 "size" => "単行本",
                 "created_user_id" => 1,
-                "created_at" => "2021-03-01T11:00:40.000000Z",
-                "updated_at" => "2021-03-01T11:00:40.000000Z"
+                "created_at" => "2021-03-01T11:00:40",
+                "updated_at" => "2021-03-01T11:00:40"
             ]
         ];
 
