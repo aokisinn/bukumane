@@ -54,5 +54,5 @@ export const useBookList = () => {
             });
     };
 
-    return { getBookList, bookList, loading, error, isLastPage };
+    return { getBookList, bookList, loading, error, isLastPage, currentPage };
 };

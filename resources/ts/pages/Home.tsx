@@ -11,7 +11,7 @@ import Button from "@material-ui/core/Button";
 
 const Home = (props: any) => {
     const { setCurrentUser } = useAuth();
-    const { getBookList, bookList, isLastPage } = useBookList();
+    const { getBookList, bookList, isLastPage, currentPage } = useBookList();
 
     useEffect(() => {
         setCurrentUser().then(currentUser => {
@@ -41,7 +41,7 @@ const Home = (props: any) => {
                             </Grid>
                         );
                     })}
-                    {isLastPage && bookList ? null : (
+                    {currentPage === 0 || isLastPage ? null : (
                         <Button
                             color="primary"
                             variant="contained"
