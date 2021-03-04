@@ -9,9 +9,16 @@ import { withRouter } from "react-router";
 import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles({
+    bookCard: {
+        height: 450
+    },
     media: {
         height: 320,
-        backgroundSize: "contain"
+        backgroundSize: "contain",
+        marginTop: '10px'
+    },
+    titile: {
+        fontSize: '20px'
     }
 });
 
@@ -23,6 +30,7 @@ const BookCard: React.FC<{
 
     return (
         <Card
+            className={classes.bookCard}
             onClick={() => {
                 hisotry.push("/book/detail/" + book.id);
             }}
@@ -32,11 +40,8 @@ const BookCard: React.FC<{
                 image={book.large_image_url ?? "/images/no_image.png"}
             />
             <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
+                <Typography gutterBottom variant="h5" component="h2" className={classes.titile}>
                     {book.title}
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                    {book.caption?.substr(0, 20)}
                 </Typography>
             </CardContent>
         </Card>
