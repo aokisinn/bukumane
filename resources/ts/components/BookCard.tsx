@@ -43,9 +43,6 @@ const BookCard: React.FC<{
                 <Typography gutterBottom variant="h5" component="h2" className={classes.titile}>
                     {book.title}
                 </Typography>
-                {/* <Typography variant="body2" color="textSecondary" component="p">
-                    {book.caption?.substr(0, 20)}
-                </Typography> */}
             </CardContent>
         </Card>
     );
