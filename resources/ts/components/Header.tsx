@@ -6,6 +6,7 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
+import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -23,6 +24,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
 export default function Header() {
     const classes = useStyles();
+    const hisotry = useHistory();
 
     return (
         <div className={classes.root}>
@@ -40,7 +42,11 @@ export default function Header() {
                     >
                         <MenuIcon />
                     </IconButton>
-                    <Typography variant="h6" className={classes.title}>
+                    <Typography 
+                        variant="h6" 
+                        className={classes.title} 
+                        onClick={() => { hisotry.push("/"); }}
+                    >
                         ブクマネ!
                     </Typography>
                 </Toolbar>
