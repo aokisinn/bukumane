@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import RightMotion from "../../components/motion/RightMotion";
+import Loading from "../../components/Loading";
 import { useAuth } from "../../context/auth/useAuth";
 import { useFindBook } from "../../hooks/useFindBook";
 import Fab from "@material-ui/core/Fab";
@@ -75,8 +76,7 @@ const DetailBook = (props: any) => {
     return (
         <React.Fragment>
             {loading ? (
-                // TODO ローディングの共通のコンポーネントを作成
-                <>ローディング中</>
+                <Loading />
             ) : (
                 <RightMotion>
                     <Card className={classes.detailBox}>
