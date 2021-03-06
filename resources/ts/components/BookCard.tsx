@@ -11,8 +11,12 @@ import { useHistory } from "react-router-dom";
 const useStyles = makeStyles({
     bookCard: {
         height: 450,
+        boxShadow: '0 0 3px 0 rgba(0,0,0,.12), 0 2px 3px 0 rgba(0,0,0,.22)',
+        translate: '0.3s',
         '&:hover': {
             cursor: "pointer",
+            boxShadow: '0 15px 30px -5px rgba(0,0,0,.35), 0 0 5px rgba(0,0,0,.3)',
+            translate: '-4px'
         }
     },
     media: {
