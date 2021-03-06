@@ -19,7 +19,10 @@ const useStyles = makeStyles((theme: Theme) =>
             marginRight: theme.spacing(2)
         },
         title: {
-            flexGrow: 1
+            flexGrow: 1,
+            '&:hover': {
+                cursor: "pointer",
+            }
         }
     })
 );

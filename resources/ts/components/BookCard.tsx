@@ -10,7 +10,10 @@ import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles({
     bookCard: {
-        height: 450
+        height: 450,
+        '&:hover': {
+            cursor: "pointer",
+        }
     },
     media: {
         height: 320,
