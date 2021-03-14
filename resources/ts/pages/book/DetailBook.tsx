@@ -12,6 +12,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
+import RentalBookInfo from "../../components/RentalBookInfo";
 
 const useStyles = makeStyles({
     paperStyle: {
@@ -50,7 +51,7 @@ const useStyles = makeStyles({
 });
 
 const DetailBook = (props: any) => {
-    const { setCurrentUser } = useAuth();
+    const { authUser, setCurrentUser } = useAuth();
     const { findBook, book, loading } = useFindBook();
     const classes = useStyles();
     const bookId = props.match.params.id;
@@ -139,6 +140,10 @@ const DetailBook = (props: any) => {
                                 {book?.caption}
                             </Typography>
                         </CardContent>
+                        <RentalBookInfo
+                            currentUserId={authUser?.id}
+                            bookId={bookId}
+                        />
                     </Card>
                 </RightMotion>
             )}
