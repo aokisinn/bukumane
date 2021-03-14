@@ -35,8 +35,8 @@ const RelativeBook = (props: any) => {
             <RightMotion>
                 <Grid container spacing={1}>
                     <TextField
-                        label="tile"
-                        placeholder="書籍のTitle"
+                        label="タイトル"
+                        placeholder="書籍のタイトル"
                         style={{ width: "100%" }}
                         value={title}
                         onChange={e => setTitle(e.target.value)}

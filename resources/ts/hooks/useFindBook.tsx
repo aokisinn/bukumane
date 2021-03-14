@@ -16,7 +16,6 @@ export const useFindBook = () => {
         apiClient
             .post("/api/findBook", { bookId })
             .then(res => {
-                console.log(res);
                 setLoading(false);
 
                 const book = {
@@ -36,7 +35,6 @@ export const useFindBook = () => {
                     created_at: res.data.book?.created_at,
                     updated_at: res.data.book?.updated_at
                 };
-                // console.log(book);
                 setBook(book);
             })
             .catch(err => {

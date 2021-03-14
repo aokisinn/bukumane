@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import RightMotion from "../../components/motion/RightMotion";
+import Loading from "../../components/Loading";
 import { useAuth } from "../../context/auth/useAuth";
 import { useFindBook } from "../../hooks/useFindBook";
 import Fab from "@material-ui/core/Fab";
 import ArrowBack from "@material-ui/icons/ArrowBack";
-import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
 import CardMedia from "@material-ui/core/CardMedia";
@@ -75,8 +76,7 @@ const DetailBook = (props: any) => {
     return (
         <React.Fragment>
             {loading ? (
-                // TODO ローディングの共通のコンポーネントを作成
-                <>ローディング中</>
+                <Loading />
             ) : (
                 <RightMotion>
                     <Card className={classes.detailBox}>
