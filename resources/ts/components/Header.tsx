@@ -30,17 +30,7 @@ const useStyles = makeStyles((theme: Theme) =>
 export default function Header(props: any) {
     const classes = useStyles();
     const hisotry = useHistory();
-    const { authUser, setCurrentUser } = useAuth();
-    const [loginUser, setLoginUser] = useState("");
-
-    useEffect(() => {
-        setCurrentUser().then(currentUser => {
-            if (!currentUser) {
-                return props.history.push("/login");
-            }
-            setLoginUser(currentUser.loginId);
-        });
-    }, []);
+    const { authUser } = useAuth();
 
     return (
         <div className={classes.root}>
@@ -67,8 +57,15 @@ export default function Header(props: any) {
                     >
                         ブクマネ!
                     </Typography>
-                    <Typography>{loginUser}</Typography>
-                    <Avatar alt="プロフィール画像" src="/images/no_user.png" />
+                    {authUser ? (
+                        <>
+                            <Typography>{authUser.loginId}</Typography>
+                            <Avatar
+                                alt="プロフィール画像"
+                                src="/images/no_user.png"
+                            />
+                        </>
+                    ) : null}
                 </Toolbar>
             </AppBar>
         </div>
