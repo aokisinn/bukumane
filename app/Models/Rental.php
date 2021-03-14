@@ -39,6 +39,7 @@ class Rental extends Model
      */
     public function user()
     {
+        // \DB::getQueryLog();
         return $this->belongsTo(User::class);
     }
 
