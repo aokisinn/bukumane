@@ -36,18 +36,6 @@ export default function Header(props: any) {
         <div className={classes.root}>
             <AppBar position="static">
                 <Toolbar>
-                    <IconButton
-                        edge="start"
-                        className={classes.menuButton}
-                        color="inherit"
-                        aria-label="menu"
-                        onClick={() => {
-                            // TODO 機能一覧表示
-                            alert("未実装");
-                        }}
-                    >
-                        <MenuIcon />
-                    </IconButton>
                     <Typography
                         variant="h6"
                         className={classes.title}
