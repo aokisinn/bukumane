@@ -24,7 +24,7 @@ class Rental extends JsonResource
             'book_id' => $this->book_id,
             'state' => $this->state,
             'borrow_date' => $this->borrow_date,
-            'return_date' => $this->state === RentalStateType::RETURN ? $this->return_date : null,
+            'return_date' => $this->state == RentalStateType::RETURN ? $this->return_date : null,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at
         ];

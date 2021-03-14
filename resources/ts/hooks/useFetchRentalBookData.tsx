@@ -7,10 +7,14 @@ export const useFetchRentalBookData = () => {
     const [loading, setLoading] = useState<boolean>(false);
     const [error, setError] = useState<Error | undefined>();
     const [rentalList, setRentalList] = useState<Array<RentalType>>([]);
+    // TODO 別でもつ
+    const [isBorrow, setIsBorrow] = useState<boolean>(false);
 
     const fetchRentalBookData = useCallback(
-        async (bookId: string | number): Promise<void> => {
+        async (bookId: number, currentUserId: number): Promise<void> => {
             setLoading(true);
+            setIsBorrow(false);
+
             apiClient
                 .post("/api/fetchRentalBookData", {
                     bookId
@@ -20,6 +24,14 @@ export const useFetchRentalBookData = () => {
                     console.log(res.data.rentals[0].user.login_id);
 
                     const rentals = res.data.rentals.map(function(rental) {
+                        console.log("currentUserId");
+                        console.log(currentUserId);
+                        if (
+                            currentUserId == rental?.user.id &&
+                            rental?.state == 0
+                        ) {
+                            setIsBorrow(true);
+                        }
                         return {
                             id: rental?.id,
                             bookId: rental?.book_id,
@@ -51,5 +63,5 @@ export const useFetchRentalBookData = () => {
         []
     );
 
-    return { fetchRentalBookData, rentalList, loading, error };
+    return { fetchRentalBookData, isBorrow, rentalList, loading, error };
 };

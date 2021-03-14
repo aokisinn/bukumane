@@ -14,6 +14,7 @@ class FetchRentalBookData
     public function invoke(string $bookId): ?Collection
     {
         return Rental::with('user')->where('book_id', $bookId)
+            ->orderBy('borrow_date', 'desc')
             ->get();
     }
 }
