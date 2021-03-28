@@ -7,7 +7,7 @@ import Typography from "@material-ui/core/Typography";
 import { BookType } from "../types/BookType";
 import { withRouter } from "react-router";
 import { useHistory } from "react-router-dom";
-import Button from '@material-ui/core/Button';
+import BookState from './BookState'
 
 const useStyles = makeStyles({
     bookCard: {
@@ -38,8 +38,10 @@ const useStyles = makeStyles({
 });
 
 const BookCard: React.FC<{
+    id: number;
     book: BookType;
-}> = ({ book }) => {
+    currentUserId: number | undefined;
+}> = ({ id, book, currentUserId }) => {
     const classes = useStyles();
     const hisotry = useHistory();
 
@@ -50,13 +52,10 @@ const BookCard: React.FC<{
                 hisotry.push("/book/detail/" + book.id);
             }}
         >
-            <Button 
-                variant="contained" 
-                className={classes.statusButton}
-                color="secondary"
-            >
-                貸出中
-            </Button>
+            <BookState 
+                currentUserId={currentUserId}
+                bookId={id}
+            />
             <CardMedia
                 className={classes.media}
                 image={book.large_image_url ?? "/images/no_image.png"}
