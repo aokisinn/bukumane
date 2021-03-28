@@ -13,6 +13,7 @@ import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 import RentalBookInfo from "../../components/RentalBookInfo";
+import BookState from '../../components/BookState';
 
 const useStyles = makeStyles({
     paperStyle: {
@@ -43,11 +44,14 @@ const useStyles = makeStyles({
         fontSize: "20px"
     },
     registerDate: {
-        marginTop: 10,
+        marginTop: 5,
         marginRight: "16px",
         textAlign: "right",
         fontSize: "0.9rem"
-    }
+    },
+    statusButton: {
+        margin: '5px 5px'
+    },
 });
 
 const DetailBook = (props: any) => {
@@ -64,7 +68,7 @@ const DetailBook = (props: any) => {
         });
         findBook(bookId);
     }, []);
-
+    
     //登録日(YYYY-MM-DD)
     const registerDate = book?.created_at?.slice(0, 10);
 
@@ -81,6 +85,10 @@ const DetailBook = (props: any) => {
             ) : (
                 <RightMotion>
                     <Card className={classes.detailBox}>
+                        <BookState 
+                            currentUserId={authUser?.id}
+                            bookId={bookId}
+                        />
                         <Typography
                             className={classes.registerDate}
                             variant="body2"
