@@ -1,16 +1,15 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import RightMotion from "../components/motion/RightMotion";
 import { useAuth } from "../context/auth/useAuth";
 import { useBookList } from "../hooks/useBookList";
 import BookCard from "../components/BookCard";
-// import NavBar from "../components/NavBar";
+import Loading from "../components/Loading";
 import TextField from "@material-ui/core/TextField";
 import Grid from "@material-ui/core/Grid";
 import Fab from "@material-ui/core/Fab";
 import AddIcon from "@material-ui/icons/Add";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
-import IconButton from '@material-ui/core/IconButton';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import SearchIcon from '@material-ui/icons/Search';
 import Checkbox from '@material-ui/core/Checkbox';
@@ -30,8 +29,9 @@ const useStyles = makeStyles({
 
 const Home = (props: any) => {
     const classes = useStyles();
-    const { setCurrentUser } = useAuth();
-    const { getBookList, bookList, isLastPage, currentPage } = useBookList();
+    const [ title, setTitle ] = useState("");
+    const { authUser, setCurrentUser } = useAuth();
+    const { getBookList, bookList, loading, isLastPage, currentPage } = useBookList();
 
     useEffect(() => {
         setCurrentUser().then(currentUser => {
@@ -42,61 +42,76 @@ const Home = (props: any) => {
         getBookList();
     }, []);
 
+
+    //TODO：タイトル検索で書籍取得
+
+    //貸出中チェック
+    const getBooksListOfLending = e => {
+        console.log('チェック状況',e.target.checked);
+        if(e.target.checked) {
+            //TODO:trueの時貸出中だけに絞って表示
+        }
+    }
+
     return (
         <React.Fragment>
-            {/* <NavBar /> */}
-            <RightMotion>
-
-                {/* 書籍検索 */}
-                <Grid className={classes.searchBox}>
-                    <TextField 
-                        label="書籍タイトル"
-                        className={classes.searchField}        
-                        InputProps={{
-                            startAdornment: (
-                                <InputAdornment position="start">
-                                    <SearchIcon />
-                                </InputAdornment>
-                            ),
-                        }}
-                    />
-                    <FormControlLabel
-                        value="borrowing"
-                        control={<Checkbox color="secondary" />}
-                        label="貸出中"
-                        labelPlacement="end"
-                    />
-                </Grid>
-
-                <Grid container spacing={1}>
-                    {bookList?.map(function(book) {
-                        return (
-                            <Grid
-                                item
-                                xs={12}
-                                md={3}
-                                lg={3}
-                                xl={2}
-                                key={book.id}
-                            >
-                                <BookCard book={book} />
-                            </Grid>
-                        );
-                    })}
-                    {currentPage === 0 || isLastPage ? null : (
-                        <Button
-                            color="primary"
-                            variant="contained"
-                            fullWidth
-                            onClick={() => {
-                                getBookList();
-                            }}
-                        >
-                            取得
-                        </Button>
-                    )}
-                </Grid>
-            </RightMotion>
+            {loading ? (
+                <Loading />
+            ) : (
+                <RightMotion>
+                    <Grid>
+                        <Grid className={classes.searchBox}>
+                            <TextField 
+                                label="書籍タイトル"
+                                className={classes.searchField}
+                                value={title}
+                                onChange={e => setTitle(e.target.value)}        
+                                InputProps={{
+                                    startAdornment: (
+                                        <InputAdornment position="start">
+                                            <SearchIcon />
+                                        </InputAdornment>
+                                    ),
+                                }}
+                            />
+                            <FormControlLabel
+                                control={<Checkbox color="secondary" />}
+                                label="貸出中"
+                                labelPlacement="end"
+                                onChange={getBooksListOfLending}
+                            />
+                        </Grid>
+                        <Grid container spacing={1}>
+                            {bookList?.map(function(book) {
+                                return (
+                                    <Grid
+                                        item
+                                        xs={12}
+                                        md={3}
+                                        lg={3}
+                                        xl={2}
+                                        key={book.id}
+                                    >
+                                        <BookCard id={book.id} book={book} currentUserId={authUser?.id} />
+                                    </Grid>
+                                );
+                            })}
+                            {currentPage === 0 || isLastPage ? null : (
+                                <Button
+                                    color="primary"
+                                    variant="contained"
+                                    fullWidth
+                                    onClick={() => {
+                                        getBookList();
+                                    }}
+                                >
+                                    取得
+                                </Button>
+                            )}
+                        </Grid>
+                    </Grid>
+                </RightMotion>
+            )}
             <div
                 style={{
                     margin: 0,
