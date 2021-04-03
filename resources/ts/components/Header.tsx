@@ -36,6 +36,7 @@ export default function Header(props: any) {
         <div className={classes.root}>
             <AppBar position="static">
                 <Toolbar>
+                    <MenuIcon className={classes.menuButton} />
                     <Typography
                         variant="h6"
                         className={classes.title}
