@@ -4,8 +4,8 @@
 
 ```bash
 cd /path/to/work_dir
-git clone git@bitbucket.org:mediaxis/kitabai.git
-cd kitabai
+git clone git@bitbucket.org:mediaxis/bukumane.git
+cd bukumane
 docker-compose build
 docker-compose up -d
 docker-compose exec app php artisan migrate
